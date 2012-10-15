@@ -12,11 +12,9 @@ public abstract class BaseActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		
 		myNavigator = new Navigator(this);
-		mySettingEditor = new SharePreferencesEditor(this,SharePreferencesEditor.SettingsName);
 	}
 
 	protected Navigator myNavigator = null;
-	protected SharePreferencesEditor mySettingEditor = null; 
+
 }
