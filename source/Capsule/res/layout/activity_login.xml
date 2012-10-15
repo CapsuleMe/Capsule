@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp" >
+
+    <TextView
+        android:id="@+id/textViewNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/login"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <AutoCompleteTextView
+        android:id="@+id/editTextNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewNumber"
+        android:layout_alignBottom="@+id/textViewNumber"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/textViewNumber"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <TextView
+        android:id="@+id/textViewPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewNumber"
+        android:layout_marginTop="30dp"
+        android:text="@string/password"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewPassword"
+        android:layout_alignBottom="@+id/textViewPassword"
+        android:layout_alignLeft="@+id/editTextNumber"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:hint="@string/input_password"
+        android:inputType="textPassword" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:onClick="login"
+        android:text="Login" />
+
+    <Button
+        android:id="@+id/buttonForgetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/buttonLogin"
+        android:layout_marginTop="32dp"
+        android:onClick="gotoForgetPasswordActivity"
+        android:text="Forget" />
+
+    <Button
+        android:id="@+id/buttonRegist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonForgetPassword"
+        android:layout_alignBottom="@+id/buttonForgetPassword"
+        android:layout_alignParentRight="true"
+        android:onClick="gotoRegistActivity"
+        android:text="Regist" />
+
+</RelativeLayout>
