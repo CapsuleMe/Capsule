@@ -11,9 +11,15 @@ public class LoginRepository extends BaseRepository {
 		super(context);
 	}
 	
+	public User loginAsLast() {
+		String number = mySettingEditor.get("number", "");
+		String password = mySettingEditor.get("password","");
+		return login(number,password);
+	}
+	
 	public String[] getHistoryUserNumber()
 	{
-		throw new UnsupportedOperationException();
+		return null;
 	}
 	
 	public String getLastUserNumber()
@@ -21,9 +27,15 @@ public class LoginRepository extends BaseRepository {
 		throw new UnsupportedOperationException();
 	}
 	
+	
+	/**
+	 * @param number user number
+	 * @param password password
+	 * @return if verify failed, then return null
+	 */
 	public User login(String number,String password)
 	{
-		throw new UnsupportedOperationException();
+		return null;
 	}
 	
 }
