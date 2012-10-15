@@ -12,6 +12,6 @@ public abstract class BaseRepository {
 	public BaseRepository(Context context)
 	{
 		myContext = context;
-		mySettingEditor = new SharePreferencesEditor(this,SharePreferencesEditor.SettingsName);
+		mySettingEditor = new SharePreferencesEditor(myContext,SharePreferencesEditor.SettingsName);
 	}
 }
