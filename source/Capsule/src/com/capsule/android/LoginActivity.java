@@ -22,12 +22,13 @@ public class LoginActivity extends BaseActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_login);
 		
 		loginRespository = new LoginRepository(this);
 		numberView = (AutoCompleteTextView) findViewById(R.id.editTextNumber);
 		passwordView = (EditText)findViewById(R.id.editTextPassword);
 		
-		setContentView(R.layout.activity_login);
+		
 	}
 
 	@Override
