@@ -8,5 +8,7 @@
     <string name="login">登录</string>
     <string name="password">密码</string>
     <string name="input_password">请输入密码</string>
+    <string name="number">号码</string>
+    <string name="input_number">请输入本机号码</string>
 
 </resources>
