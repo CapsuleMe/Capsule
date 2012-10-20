@@ -61,7 +61,7 @@
     </filter-mapping>
     <filter>
         <filter-name>RewriteFilter</filter-name>
-        <filter-class>com.capsule.web.RewriteFilter</filter-class>
+        <filter-class>com.capsule.common.context.RewriteFilter</filter-class>
         <init-param>
             <param-name>rewriteFuffix</param-name>
             <param-value>.action</param-value>
