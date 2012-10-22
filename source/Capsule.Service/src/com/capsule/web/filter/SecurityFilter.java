@@ -71,7 +71,7 @@ public class SecurityFilter implements Filter{
         if(null == sign) {
             throw new CapsuleException("没有签名参数");
         }
-        Map<String, String> params=new HashMap<String, String>(request.getParameterMap());
+        Map<String, String[]> params=new HashMap<String, String[]>(request.getParameterMap());
         String signData=ParameterUtil.getSignData(params);
         String tmp=MessageDigestUtil.getMD5(signData + Constants.SIGN_DATA_KEY);
         if(!sign.equals(tmp)){

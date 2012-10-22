@@ -18,7 +18,7 @@ public class ParameterUtil {
      * @param params
      * @return
      */
-    public static String getSignData(Map<String, String> params) {
+    public static String getSignData(Map<String, String[]> params) {
         StringBuffer content = new StringBuffer();
 
      // 按照key做排序
@@ -30,11 +30,16 @@ public class ParameterUtil {
             if ("sign".equals(key)||"sign_type".equals(key)) {
                 continue;
             }
-            String value = (String) params.get(key);
-            if (value != null) {
-                content.append((i == 0 ? "" : "&") + key + "=" + value);
-            } else {
-                content.append((i == 0 ? "" : "&") + key + "=");
+            String[] values=params.get(key);
+            if(null == values) {
+                continue;
+            }
+            for(String value: values) {
+                if(value != null) {
+                    content.append((i == 0 ? "" : "&") + key + "=" + value);
+                } else {
+                    content.append((i == 0 ? "" : "&") + key + "=");
+                }
             }
 
         }
