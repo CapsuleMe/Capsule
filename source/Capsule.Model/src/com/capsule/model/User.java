@@ -1,9 +1,17 @@
 package com.capsule.model;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
+
+@DatabaseTable
 public class User {
 
+	@DatabaseField(id=true)
 	private String id;
+	@DatabaseField
 	private String number;
+	@DatabaseField
 	private String password;
 	
 	public String getId() {

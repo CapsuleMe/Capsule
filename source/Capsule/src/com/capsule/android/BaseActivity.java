@@ -1,10 +1,9 @@
 package com.capsule.android;
 
-import com.capsule.common.Navigator;
-import com.capsule.common.SharePreferencesEditor;
-
 import android.app.Activity;
 import android.os.Bundle;
+
+import com.capsule.common.Navigator;
 
 public abstract class BaseActivity extends Activity {
 
