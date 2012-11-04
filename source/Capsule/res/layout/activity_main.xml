@@ -1,14 +1,35 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@drawable/welcome_bg">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout android:id="@+id/welcomeLayout"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/hello_world"
-        tools:context=".MainActivity" />
-
+        android:orientation="vertical"
+        android:background="#000000"
+        android:padding="10dip"
+        android:paddingTop="15dip"
+        android:paddingBottom="20dip"
+        android:layout_alignParentBottom="true">
+        <Button android:id="@+id/registerBtn"
+            android:text="@string/register"
+            android:layout_width="wrap_content"
+        	android:layout_height="40dip"
+        	android:layout_marginBottom="10dip"
+        	android:background="@drawable/register_btn"
+        	android:contentDescription="@string/register"
+            style="@drawable/register_btn_selector"
+            android:onClick="goRegister"/>
+        
+        <Button android:id="@+id/loginBtn"
+            android:text="@string/login"
+            android:layout_width="wrap_content"
+        	android:layout_height="40dip"
+        	android:background="@drawable/login_btn"
+        	android:contentDescription="@string/login"
+            style="@drawable/login_btn_selector"
+            android:onClick="goLogin"/>
+    </LinearLayout>
 </RelativeLayout>
