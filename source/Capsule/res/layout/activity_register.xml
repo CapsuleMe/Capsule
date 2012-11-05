@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp" >
+ 
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:ems="20"
+        android:layout_marginTop="10dp"
+        android:hint="@string/register_put_username"
+        android:background="@drawable/round_edittext">
+        <requestFocus />
+    </EditText>
+	
+    <TextView
+        android:id="@+id/textAgreement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editTextUsername"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="3dp"
+        android:text="@string/register_agreement" 
+        android:textSize="15sp"/>
+    
+    <TextView
+        android:id="@+id/textAgreement2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textAgreement"
+        android:layout_toRightOf="@+id/textAgreement"
+        android:text="@string/register_agreement2"
+        android:textSize="15sp" />
+    
+    <Button android:id="@+id/registerBtn"
+            android:text="@string/register"
+            android:layout_width="wrap_content"
+        	android:layout_marginTop="15dp"
+        	android:layout_height="40dip"
+        	android:background="@drawable/login_btn"
+        	android:layout_below="@+id/textAgreement"
+        	android:contentDescription="@string/register"
+            style="@drawable/login_btn_selector"
+            android:onClick="doRegister"/>
+
+
+</RelativeLayout>
