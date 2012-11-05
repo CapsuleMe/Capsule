@@ -18,18 +18,16 @@
             android:layout_width="wrap_content"
         	android:layout_height="40dip"
         	android:layout_marginBottom="10dip"
-        	android:background="@drawable/register_btn"
+        	android:background="@drawable/register_btn_selector"
         	android:contentDescription="@string/register"
-            style="@drawable/register_btn_selector"
             android:onClick="goRegister"/>
         
         <Button android:id="@+id/loginBtn"
             android:text="@string/login"
             android:layout_width="wrap_content"
         	android:layout_height="40dip"
-        	android:background="@drawable/login_btn"
+        	android:background="@drawable/login_btn_selector"
         	android:contentDescription="@string/login"
-            style="@drawable/login_btn_selector"
             android:onClick="goLogin"/>
     </LinearLayout>
 </RelativeLayout>

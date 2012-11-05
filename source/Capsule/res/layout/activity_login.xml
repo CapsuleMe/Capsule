@@ -24,7 +24,7 @@
         android:layout_marginTop="10dp"
         android:hint="@string/input_password"
         android:background="@drawable/round_edittext"
-        android:inputType="textPassword" >
+        android:inputType="textPassword">
         <requestFocus />
     </EditText>
 
@@ -42,11 +42,10 @@
     <Button android:id="@+id/loginBtn"
             android:text="@string/login"
             android:layout_width="wrap_content"
-        android:layout_marginTop="15dp"
+        	android:layout_marginTop="15dp"
         	android:layout_height="40dip"
-        	android:background="@drawable/login_btn"
+        	android:background="@drawable/login_btn_selector"
         	android:layout_below="@+id/textForgetPassword"
         	android:contentDescription="@string/login"
-            style="@drawable/login_btn_selector"
             android:onClick="doLogin"/>
 </RelativeLayout>
