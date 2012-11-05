@@ -4,15 +4,17 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.capsule.android.LoginActivity;
+import com.capsule.android.MainActivity;
+import com.capsule.android.RegisterActivity;
 
 public class Navigator {
 
 	//Add your new Activity SEQ value there
-	public static int MainActivitySEQ = 0;
-	public static int LoginActivitySEQ = 1;
-	public static int RegistActivitySEQ = 2;
-	public static int ForgertPasswordSEQ = 3;
-	public static int FriendListActivitySEQ = 10;
+	public final static int MainActivitySEQ = 0;
+	public final static int LoginActivitySEQ = 1;
+	public final static int RegistActivitySEQ = 2;
+	public final static int ForgertPasswordSEQ = 3;
+	public final static int FriendListActivitySEQ = 10;
 	
 	private Context myContext = null;
 	
@@ -55,13 +57,19 @@ public class Navigator {
 	 * @param seq Activity SEQ number, you can use Navigator.MainActivtySEQ to switch
 	 * @param src Copy all extras in "src" to new intent
 	 */
-	public void switchTo(int seq, Intent src)
-	{
-		if(seq == LoginActivitySEQ )
-		{
-			swtichTo(LoginActivity.class,src);
-			return;
-		}
+	public void switchTo(int seq, Intent src){
+		switch(seq) {
+		    case MainActivitySEQ:
+		        swtichTo(MainActivity.class, src);
+		    case LoginActivitySEQ:
+                swtichTo(LoginActivity.class, src);
+                break;
+            case RegistActivitySEQ:
+                swtichTo(RegisterActivity.class, src);
+            default:
+                break;
+        }
+	    return;
 	}
 	
 }
