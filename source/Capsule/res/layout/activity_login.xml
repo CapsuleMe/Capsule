@@ -2,81 +2,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="30dp" >
-
-    <TextView
-        android:id="@+id/textViewNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="30dp"
-        android:text="@string/number"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+    android:layout_margin="15dp" >
 
     <AutoCompleteTextView
         android:id="@+id/editTextNumber"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textViewNumber"
-        android:layout_alignBottom="@+id/textViewNumber"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@+id/textViewNumber"
-        android:ems="10"
+        android:layout_alignParentLeft="true"
+        android:ems="11"
         android:hint="@string/input_number"
+        android:background="@drawable/round_edittext"
         android:inputType="phone" />
-
-    <TextView
-        android:id="@+id/textViewPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewNumber"
-        android:layout_marginTop="30dp"
-        android:text="@string/password"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
+ 
     <EditText
         android:id="@+id/editTextPassword"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textViewPassword"
-        android:layout_alignBottom="@+id/textViewPassword"
-        android:layout_alignLeft="@+id/editTextNumber"
-        android:layout_alignParentRight="true"
-        android:ems="10"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editTextNumber"
+        android:ems="20"
+        android:layout_marginTop="10dp"
         android:hint="@string/input_password"
+        android:background="@drawable/round_edittext"
         android:inputType="textPassword" >
-
         <requestFocus />
     </EditText>
 
-    <Button
-        android:id="@+id/buttonLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:onClick="login"
-        android:text="Login" />
-
-    <Button
-        android:id="@+id/buttonForgetPassword"
+    <TextView
+        android:id="@+id/textForgetPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/buttonLogin"
-        android:layout_marginTop="32dp"
+        android:layout_below="@+id/editTextPassword"
+        android:layout_marginTop="20dp"
         android:onClick="gotoForgetPasswordActivity"
-        android:text="Forget" />
+        android:text="@string/forget_password" 
+        style="@style/txt"/>
 
-    <Button
-        android:id="@+id/buttonRegist"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/buttonForgetPassword"
-        android:layout_alignBottom="@+id/buttonForgetPassword"
-        android:layout_alignParentRight="true"
-        android:onClick="gotoRegistActivity"
-        android:text="Regist" />
-
+    <Button android:id="@+id/loginBtn"
+            android:text="@string/login"
+            android:layout_width="wrap_content"
+        android:layout_marginTop="15dp"
+        	android:layout_height="40dip"
+        	android:background="@drawable/login_btn"
+        	android:layout_below="@+id/textForgetPassword"
+        	android:contentDescription="@string/login"
+            style="@drawable/login_btn_selector"
+            android:onClick="doLogin"/>
 </RelativeLayout>

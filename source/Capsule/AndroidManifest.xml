@@ -6,7 +6,7 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="15" />
-
+    
     <application
         android:name=".MyApplication"
         android:icon="@drawable/ic_launcher"
@@ -24,6 +24,9 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" >
+        </activity>
+        <activity android:name=".RegisterActivity" 
+            android:label="@string/title_activity_register" >
         </activity>
         <activity
             android:name=".FriendActivity"
