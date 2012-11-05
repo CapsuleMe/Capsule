@@ -1,20 +1,28 @@
 package com.capsule.android;
 
-import android.os.Bundle;
-import android.app.Activity;
-import android.view.Menu;
+import com.capsule.common.Navigator;
 
-public class MainActivity extends Activity {
+import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
+
+public class MainActivity extends BaseActivity{
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
+        View layout=findViewById(R.id.welcomeLayout);
+        layout.getBackground().setAlpha(180);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_main, menu);
-        return true;
+    
+    public void goRegister(View v){
+        myNavigator.swtichTo(Navigator.RegistActivitySEQ);
+    }
+    
+    public void goLogin(View v){
+        myNavigator.swtichTo(Navigator.LoginActivitySEQ);
     }
 }

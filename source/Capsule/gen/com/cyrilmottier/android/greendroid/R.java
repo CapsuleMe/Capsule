@@ -593,8 +593,11 @@ containing a value of this type.
         public static final int url=0x7f010051;
     }
     public static final class color {
+        public static final int black=0x7f060003;
         public static final int gd_action_bar_divider_tint=0x7f060001;
         public static final int gd_action_bar_tint=0x7f060000;
+        public static final int grey=0x7f060004;
+        public static final int white=0x7f060002;
     }
     public static final class dimen {
         public static final int gd_action_bar_height=0x7f07000b;
@@ -690,91 +693,102 @@ containing a value of this type.
         public static final int gd_tab_indicator_unselected=0x7f02004b;
         public static final int ic_action_search=0x7f02004c;
         public static final int ic_launcher=0x7f02004d;
+        public static final int login_btn=0x7f02004e;
+        public static final int login_btn_press=0x7f02004f;
+        public static final int login_btn_selector=0x7f020050;
+        public static final int register_btn=0x7f020051;
+        public static final int register_btn_press=0x7f020052;
+        public static final int register_btn_selector=0x7f020053;
+        public static final int round_edittext=0x7f020054;
+        public static final int welcome_bg=0x7f020055;
     }
     public static final class id {
         public static final int bottom=0x7f050008;
-        public static final int buttonForgetPassword=0x7f05001a;
-        public static final int buttonLogin=0x7f050019;
-        public static final int buttonRegist=0x7f05001b;
         public static final int center=0x7f05000d;
         public static final int center_horizontal=0x7f05000c;
         public static final int center_vertical=0x7f05000b;
         public static final int dashboard=0x7f050001;
-        public static final int editTextNumber=0x7f050016;
-        public static final int editTextPassword=0x7f050018;
+        public static final int editTextNumber=0x7f050015;
+        public static final int editTextPassword=0x7f050016;
+        public static final int editTextUsername=0x7f05001b;
         public static final int empty=0x7f050002;
         public static final int gd_action_bar=0x7f050012;
         public static final int gd_action_bar_content_view=0x7f050014;
-        public static final int gd_action_bar_home_item=0x7f05001c;
+        public static final int gd_action_bar_home_item=0x7f05001e;
         public static final int gd_action_bar_host=0x7f050013;
-        public static final int gd_action_bar_item=0x7f05001e;
-        public static final int gd_action_bar_item_progress_bar=0x7f05001f;
-        public static final int gd_action_bar_title=0x7f05001d;
-        public static final int gd_description=0x7f050020;
-        public static final int gd_drawable=0x7f050021;
-        public static final int gd_progress_bar=0x7f050023;
+        public static final int gd_action_bar_item=0x7f050020;
+        public static final int gd_action_bar_item_progress_bar=0x7f050021;
+        public static final int gd_action_bar_title=0x7f05001f;
+        public static final int gd_description=0x7f050022;
+        public static final int gd_drawable=0x7f050023;
+        public static final int gd_progress_bar=0x7f050025;
         public static final int gd_segmented_bar=0x7f050010;
         public static final int gd_segmented_content_view=0x7f050011;
-        public static final int gd_separator_text=0x7f05002c;
-        public static final int gd_subtext=0x7f05002d;
-        public static final int gd_subtitle=0x7f05002e;
-        public static final int gd_text=0x7f050022;
-        public static final int gd_thumbnail=0x7f05002f;
-        public static final int gdi_arrow_down=0x7f05002a;
-        public static final int gdi_arrow_up=0x7f050025;
-        public static final int gdi_footer=0x7f050029;
-        public static final int gdi_grid=0x7f05002b;
-        public static final int gdi_header=0x7f050024;
-        public static final int gdi_quick_action_items=0x7f050028;
-        public static final int gdi_rack=0x7f050027;
-        public static final int gdi_scroll=0x7f050026;
+        public static final int gd_separator_text=0x7f05002e;
+        public static final int gd_subtext=0x7f05002f;
+        public static final int gd_subtitle=0x7f050030;
+        public static final int gd_text=0x7f050024;
+        public static final int gd_thumbnail=0x7f050031;
+        public static final int gdi_arrow_down=0x7f05002c;
+        public static final int gdi_arrow_up=0x7f050027;
+        public static final int gdi_footer=0x7f05002b;
+        public static final int gdi_grid=0x7f05002d;
+        public static final int gdi_header=0x7f050026;
+        public static final int gdi_quick_action_items=0x7f05002a;
+        public static final int gdi_rack=0x7f050029;
+        public static final int gdi_scroll=0x7f050028;
         public static final int hdpi=0x7f050005;
         public static final int ldpi=0x7f050003;
         public static final int left=0x7f050009;
+        public static final int loginBtn=0x7f050018;
         public static final int mdpi=0x7f050004;
-        public static final int menu_settings=0x7f050030;
+        public static final int menu_settings=0x7f050032;
         public static final int multiple=0x7f05000f;
         public static final int normal=0x7f050000;
+        public static final int registerBtn=0x7f05001a;
         public static final int right=0x7f05000a;
         public static final int single=0x7f05000e;
-        public static final int textViewNumber=0x7f050015;
-        public static final int textViewPassword=0x7f050017;
+        public static final int textAgreement=0x7f05001c;
+        public static final int textAgreement2=0x7f05001d;
+        public static final int textForgetPassword=0x7f050017;
         public static final int top=0x7f050007;
+        public static final int welcomeLayout=0x7f050019;
         public static final int xhdpi=0x7f050006;
     }
     public static final class layout {
         public static final int activity_login=0x7f030000;
         public static final int activity_main=0x7f030001;
-        public static final int gd_action_bar_dashboard=0x7f030002;
-        public static final int gd_action_bar_empty=0x7f030003;
-        public static final int gd_action_bar_item_base=0x7f030004;
-        public static final int gd_action_bar_item_loader=0x7f030005;
-        public static final int gd_action_bar_normal=0x7f030006;
-        public static final int gd_content_dashboard=0x7f030007;
-        public static final int gd_content_empty=0x7f030008;
-        public static final int gd_content_normal=0x7f030009;
-        public static final int gd_description_item_view=0x7f03000a;
-        public static final int gd_drawable_item_view=0x7f03000b;
-        public static final int gd_expandable_list_content_dashboard=0x7f03000c;
-        public static final int gd_expandable_list_content_empty=0x7f03000d;
-        public static final int gd_expandable_list_content_normal=0x7f03000e;
-        public static final int gd_list_content_dashboard=0x7f03000f;
-        public static final int gd_list_content_empty=0x7f030010;
-        public static final int gd_list_content_normal=0x7f030011;
-        public static final int gd_long_text_item_view=0x7f030012;
-        public static final int gd_progress_item_view=0x7f030013;
-        public static final int gd_quick_action_bar=0x7f030014;
-        public static final int gd_quick_action_bar_item=0x7f030015;
-        public static final int gd_quick_action_grid=0x7f030016;
-        public static final int gd_quick_action_grid_item=0x7f030017;
-        public static final int gd_segment=0x7f030018;
-        public static final int gd_separator_item_view=0x7f030019;
-        public static final int gd_subtext_item_view=0x7f03001a;
-        public static final int gd_subtitle_item_view=0x7f03001b;
-        public static final int gd_tab_content=0x7f03001c;
-        public static final int gd_tab_indicator=0x7f03001d;
-        public static final int gd_text_item_view=0x7f03001e;
-        public static final int gd_thumbnail_item_view=0x7f03001f;
+        public static final int activity_register=0x7f030002;
+        public static final int gd_action_bar_dashboard=0x7f030003;
+        public static final int gd_action_bar_empty=0x7f030004;
+        public static final int gd_action_bar_item_base=0x7f030005;
+        public static final int gd_action_bar_item_loader=0x7f030006;
+        public static final int gd_action_bar_normal=0x7f030007;
+        public static final int gd_content_dashboard=0x7f030008;
+        public static final int gd_content_empty=0x7f030009;
+        public static final int gd_content_normal=0x7f03000a;
+        public static final int gd_description_item_view=0x7f03000b;
+        public static final int gd_drawable_item_view=0x7f03000c;
+        public static final int gd_expandable_list_content_dashboard=0x7f03000d;
+        public static final int gd_expandable_list_content_empty=0x7f03000e;
+        public static final int gd_expandable_list_content_normal=0x7f03000f;
+        public static final int gd_list_content_dashboard=0x7f030010;
+        public static final int gd_list_content_empty=0x7f030011;
+        public static final int gd_list_content_normal=0x7f030012;
+        public static final int gd_long_text_item_view=0x7f030013;
+        public static final int gd_progress_item_view=0x7f030014;
+        public static final int gd_quick_action_bar=0x7f030015;
+        public static final int gd_quick_action_bar_item=0x7f030016;
+        public static final int gd_quick_action_grid=0x7f030017;
+        public static final int gd_quick_action_grid_item=0x7f030018;
+        public static final int gd_segment=0x7f030019;
+        public static final int gd_separator_item_view=0x7f03001a;
+        public static final int gd_subtext_item_view=0x7f03001b;
+        public static final int gd_subtitle_item_view=0x7f03001c;
+        public static final int gd_tab_content=0x7f03001d;
+        public static final int gd_tab_indicator=0x7f03001e;
+        public static final int gd_text_item_view=0x7f03001f;
+        public static final int gd_thumbnail_item_view=0x7f030020;
     }
     public static final class menu {
         public static final int activity_login=0x7f0a0000;
@@ -782,6 +796,7 @@ containing a value of this type.
     }
     public static final class string {
         public static final int app_name=0x7f08001c;
+        public static final int forget_password=0x7f080028;
         public static final int gd_add=0x7f08000b;
         public static final int gd_all_friends=0x7f080017;
         public static final int gd_compass=0x7f080010;
@@ -811,14 +826,19 @@ containing a value of this type.
         public static final int gd_talk=0x7f080002;
         public static final int gd_trashcan=0x7f080015;
         public static final int hello_world=0x7f08001d;
-        public static final int input_number=0x7f080025;
-        public static final int input_password=0x7f080023;
-        public static final int login=0x7f080021;
+        public static final int input_number=0x7f080027;
+        public static final int input_password=0x7f080025;
+        public static final int login=0x7f080023;
         public static final int menu_settings=0x7f08001e;
-        public static final int number=0x7f080024;
-        public static final int password=0x7f080022;
+        public static final int number=0x7f080026;
+        public static final int password=0x7f080024;
+        public static final int register=0x7f080022;
+        public static final int register_agreement=0x7f080029;
+        public static final int register_agreement2=0x7f08002a;
+        public static final int register_put_username=0x7f08002b;
         public static final int title_activity_login=0x7f080020;
         public static final int title_activity_main=0x7f08001f;
+        public static final int title_activity_register=0x7f080021;
     }
     public static final class style {
         public static final int AppTheme=0x7f090039;
@@ -910,6 +930,7 @@ containing a value of this type.
         public static final int Theme_GreenDroid_Light=0x7f090037;
         public static final int Theme_GreenDroid_Light_NoTitleBar=0x7f090038;
         public static final int Theme_GreenDroid_NoTitleBar=0x7f090036;
+        public static final int txt=0x7f09003a;
     }
     public static final class styleable {
         /**  ActionBar related attributes 
