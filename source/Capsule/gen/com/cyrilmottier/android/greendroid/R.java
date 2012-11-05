@@ -743,42 +743,44 @@ containing a value of this type.
         public static final int xhdpi=0x7f050006;
     }
     public static final class layout {
-        public static final int activity_login=0x7f030000;
-        public static final int activity_main=0x7f030001;
-        public static final int gd_action_bar_dashboard=0x7f030002;
-        public static final int gd_action_bar_empty=0x7f030003;
-        public static final int gd_action_bar_item_base=0x7f030004;
-        public static final int gd_action_bar_item_loader=0x7f030005;
-        public static final int gd_action_bar_normal=0x7f030006;
-        public static final int gd_content_dashboard=0x7f030007;
-        public static final int gd_content_empty=0x7f030008;
-        public static final int gd_content_normal=0x7f030009;
-        public static final int gd_description_item_view=0x7f03000a;
-        public static final int gd_drawable_item_view=0x7f03000b;
-        public static final int gd_expandable_list_content_dashboard=0x7f03000c;
-        public static final int gd_expandable_list_content_empty=0x7f03000d;
-        public static final int gd_expandable_list_content_normal=0x7f03000e;
-        public static final int gd_list_content_dashboard=0x7f03000f;
-        public static final int gd_list_content_empty=0x7f030010;
-        public static final int gd_list_content_normal=0x7f030011;
-        public static final int gd_long_text_item_view=0x7f030012;
-        public static final int gd_progress_item_view=0x7f030013;
-        public static final int gd_quick_action_bar=0x7f030014;
-        public static final int gd_quick_action_bar_item=0x7f030015;
-        public static final int gd_quick_action_grid=0x7f030016;
-        public static final int gd_quick_action_grid_item=0x7f030017;
-        public static final int gd_segment=0x7f030018;
-        public static final int gd_separator_item_view=0x7f030019;
-        public static final int gd_subtext_item_view=0x7f03001a;
-        public static final int gd_subtitle_item_view=0x7f03001b;
-        public static final int gd_tab_content=0x7f03001c;
-        public static final int gd_tab_indicator=0x7f03001d;
-        public static final int gd_text_item_view=0x7f03001e;
-        public static final int gd_thumbnail_item_view=0x7f03001f;
+        public static final int activity_friend=0x7f030000;
+        public static final int activity_login=0x7f030001;
+        public static final int activity_main=0x7f030002;
+        public static final int gd_action_bar_dashboard=0x7f030003;
+        public static final int gd_action_bar_empty=0x7f030004;
+        public static final int gd_action_bar_item_base=0x7f030005;
+        public static final int gd_action_bar_item_loader=0x7f030006;
+        public static final int gd_action_bar_normal=0x7f030007;
+        public static final int gd_content_dashboard=0x7f030008;
+        public static final int gd_content_empty=0x7f030009;
+        public static final int gd_content_normal=0x7f03000a;
+        public static final int gd_description_item_view=0x7f03000b;
+        public static final int gd_drawable_item_view=0x7f03000c;
+        public static final int gd_expandable_list_content_dashboard=0x7f03000d;
+        public static final int gd_expandable_list_content_empty=0x7f03000e;
+        public static final int gd_expandable_list_content_normal=0x7f03000f;
+        public static final int gd_list_content_dashboard=0x7f030010;
+        public static final int gd_list_content_empty=0x7f030011;
+        public static final int gd_list_content_normal=0x7f030012;
+        public static final int gd_long_text_item_view=0x7f030013;
+        public static final int gd_progress_item_view=0x7f030014;
+        public static final int gd_quick_action_bar=0x7f030015;
+        public static final int gd_quick_action_bar_item=0x7f030016;
+        public static final int gd_quick_action_grid=0x7f030017;
+        public static final int gd_quick_action_grid_item=0x7f030018;
+        public static final int gd_segment=0x7f030019;
+        public static final int gd_separator_item_view=0x7f03001a;
+        public static final int gd_subtext_item_view=0x7f03001b;
+        public static final int gd_subtitle_item_view=0x7f03001c;
+        public static final int gd_tab_content=0x7f03001d;
+        public static final int gd_tab_indicator=0x7f03001e;
+        public static final int gd_text_item_view=0x7f03001f;
+        public static final int gd_thumbnail_item_view=0x7f030020;
     }
     public static final class menu {
-        public static final int activity_login=0x7f0a0000;
-        public static final int activity_main=0x7f0a0001;
+        public static final int activity_friend=0x7f0a0000;
+        public static final int activity_login=0x7f0a0001;
+        public static final int activity_main=0x7f0a0002;
     }
     public static final class string {
         public static final int app_name=0x7f08001c;
@@ -817,6 +819,7 @@ containing a value of this type.
         public static final int menu_settings=0x7f08001e;
         public static final int number=0x7f080024;
         public static final int password=0x7f080022;
+        public static final int title_activity_friend=0x7f080026;
         public static final int title_activity_login=0x7f080020;
         public static final int title_activity_main=0x7f08001f;
     }
