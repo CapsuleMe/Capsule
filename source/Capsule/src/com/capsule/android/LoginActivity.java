@@ -58,7 +58,7 @@ public class LoginActivity extends BaseActivity {
 		myNavigator.swtichTo(Navigator.ForgertPasswordSEQ);
 	}
 	
-	public void login(View targert)
+	public void doLogin(View targert)
 	{
 		//pop a loading dialog and verify by server
 		String number = numberView.getText().toString();
