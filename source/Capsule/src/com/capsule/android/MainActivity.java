@@ -15,14 +15,16 @@ public class MainActivity extends BaseActivity{
         setContentView(R.layout.activity_main);
         View layout=findViewById(R.id.welcomeLayout);
         layout.getBackground().setAlpha(180);
+        
+       myNavigator.switchTo(Navigator.FriendListActivitySEQ);
     }
 
     
     public void goRegister(View v){
-        myNavigator.swtichTo(Navigator.RegistActivitySEQ);
+        myNavigator.switchTo(Navigator.RegistActivitySEQ);
     }
     
     public void goLogin(View v){
-        myNavigator.swtichTo(Navigator.LoginActivitySEQ);
+        myNavigator.switchTo(Navigator.LoginActivitySEQ);
     }
 }
