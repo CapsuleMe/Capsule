@@ -62,13 +62,16 @@ public class Navigator {
 		switch(seq) {
 		    case MainActivitySEQ:
 		        switchTo(MainActivity.class, src);
+		        break;
 		    case LoginActivitySEQ:
                 switchTo(LoginActivity.class, src);
                 break;
             case RegistActivitySEQ:
                 switchTo(RegisterActivity.class, src);
+                break;
             case FriendListActivitySEQ:
                 switchTo(FriendActivity.class, src);
+                break;
             default:
                 break;
         }
