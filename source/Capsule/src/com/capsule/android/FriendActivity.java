@@ -9,6 +9,10 @@ import java.util.List;
 
 import android.app.ListActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnFocusChangeListener;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import com.capsule.android.widget.item.FriendItem;
 import com.capsule.model.Friend;
@@ -20,31 +24,47 @@ import com.capsule.model.User;
 public class FriendActivity extends ListActivity {
 
 	ItemAdapter adapter  = null;
-	
+	LinearLayout searchBar = null;
+	EditText searchText = null;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_friend);
         
-        List<Item> items = new ArrayList<Item>();
+        searchText = (EditText)this.findViewById(R.id.search_text);
+        searchBar = (LinearLayout)this.findViewById(R.id.friend_search);
+        searchBar.setOnFocusChangeListener(new OnFocusChangeListener(){
+
+			public void onFocusChange(View v, boolean hasFocus) {
+				// TODO Auto-generated method stub
+				searchText.requestFocus();
+			}});
         
-        items.add(new FriendItem(getFriend()));   
-        items.add(new FriendItem(getFriend()));     
-        items.add(new FriendItem(getFriend()));     
-        items.add(new FriendItem(getFriend()));     
-        items.add(new FriendItem(getFriend()));     
-        items.add(new FriendItem(getFriend()));     
-        items.add(new FriendItem(getFriend()));     
-        items.add(new FriendItem(getFriend()));     
-        items.add(new FriendItem(getFriend()));     
-        items.add(new FriendItem(getFriend()));   
-        
-        final ItemAdapter adapter = new ItemAdapter(this, items);
-        setListAdapter(adapter);
+        FillList();
         
     }
 
+    private void FillList()
+    {
+    	   List<Item> items = new ArrayList<Item>();
+           
+           items.add(new FriendItem(getFriend()));   
+           items.add(new FriendItem(getFriend()));     
+           items.add(new FriendItem(getFriend()));     
+           items.add(new FriendItem(getFriend()));     
+           items.add(new FriendItem(getFriend()));     
+           items.add(new FriendItem(getFriend()));     
+           items.add(new FriendItem(getFriend()));     
+           items.add(new FriendItem(getFriend()));     
+           items.add(new FriendItem(getFriend()));     
+           items.add(new FriendItem(getFriend()));   
+           
+           final ItemAdapter adapter = new ItemAdapter(this, items);
+           setListAdapter(adapter);
+    }
+    
+    
     private Friend getFriend()
     {
     	User user = new User();

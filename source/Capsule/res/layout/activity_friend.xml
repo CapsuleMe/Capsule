@@ -2,7 +2,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFF3F7" >
+    android:background="#EFF3F7">
 
     <RelativeLayout
         android:id="@+id/friend_top_bar"
@@ -53,18 +53,42 @@
 
     </RelativeLayout>
     
-    <TextView android:id="@+id/friend_search"
+    <LinearLayout   
+        android:id="@+id/friend_search"
         android:layout_below="@id/friend_top_bar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/thin_round_edittext"
-        android:text="search bar"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
+        android:orientation="horizontal">
+        <ImageButton 
+            android:layout_width="wrap_content"
+	        android:layout_height="fill_parent"
+	        android:src="@drawable/search_icon"
+	        android:scaleType="centerInside"
+	        android:background="@null"
+            />
+         <LinearLayout 
+             android:focusable="true" 
+             android:focusableInTouchMode="true"
+             android:layout_width="0px" 
+             android:layout_height="0px"/>
+         <EditText
+            android:id="@+id/search_text"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:hint="搜索联系人"
+	        android:background="@null"
+	        android:textSize="14sp"
+	        android:textColor="#B7B7B7"
+	        android:nextFocusUp="@id/search_text"
+	        android:nextFocusDown="@id/search_text"
         />
-    
+    </LinearLayout>
+  
 	<ListView android:id="@android:id/list"
 			android:layout_below="@id/friend_search"
 			android:layout_height="fill_parent"
