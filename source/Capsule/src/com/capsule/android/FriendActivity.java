@@ -49,7 +49,7 @@ public class FriendActivity extends ListActivity {
     {
     	User user = new User();
     	user.setId("1");
-    	user.setName("TEST");
+    	user.setName("卡比兽");
     	user.setNumber("186111111");
     	user.setPassword("ttt");
     	

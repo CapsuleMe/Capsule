@@ -42,32 +42,35 @@
 		android:ellipsize="end" 
 		android:text="time"
 		android:textColor="#989898"/>
-    
+    
     <TextView
-		style="?attr/gdThumbnailItemViewStyleText"
-		android:id="@+id/friend_distance"
-		android:layout_alignParentRight="true"
-		android:layout_below="@id/friend_time"
-		android:layout_alignRight="@id/friend_time"
-		android:layout_alignParentBottom="true"
-		android:layout_width="wrap_content"
-		android:gravity="center"
-		android:singleLine="true"
-		android:ellipsize="end" 
-		android:text="distance"
-		android:textColor="#006699"/>
-			
+        android:id="@+id/friend_distance"
+        style="?attr/gdThumbnailItemViewStyleText"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignRight="@id/friend_time"
+        android:layout_below="@id/friend_time"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="distance"
+        android:textColor="#006699"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+			
 	<TextView
-		style="?attr/gdThumbnailItemViewStyleText"
-		android:id="@+id/friend_name"
-		android:layout_width="fill_parent"
-		android:layout_toRightOf="@id/friend_head"
-		android:layout_toLeftOf="@id/friend_time"
-		android:gravity="bottom"
-		android:singleLine="true"
-		android:ellipsize="end" 
-		android:text="name"
-		android:textColor="#111111"/>
+	    android:id="@+id/friend_name"
+	    style="?attr/gdThumbnailItemViewStyleText"
+	    android:layout_width="fill_parent"
+	    android:layout_toLeftOf="@id/friend_time"
+	    android:layout_toRightOf="@id/friend_head"
+	    android:ellipsize="end"
+	    android:gravity="bottom"
+	    android:singleLine="true"
+	    android:text="name"
+	    android:textColor="#111111"
+	    android:textSize="18sp" />
 
 	<TextView
 		style="?attr/gdThumbnailItemViewStyleSubtitle"

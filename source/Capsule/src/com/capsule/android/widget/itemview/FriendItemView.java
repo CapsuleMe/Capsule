@@ -52,7 +52,7 @@ public class FriendItemView extends RelativeLayout implements ItemView {
 		mNameView.setText(fitem.friend.getUser().getName());
 		mAddressView.setText(fitem.friend.getLocation().getAddress());
 		mTimeView.setText("10分钟前");
-		mDistanceView.setText("100m");
+		mDistanceView.setText("10.2m");
 		
 		
 	}
