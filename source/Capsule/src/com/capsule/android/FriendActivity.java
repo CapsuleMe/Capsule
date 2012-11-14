@@ -10,6 +10,7 @@ import java.util.List;
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -34,11 +35,20 @@ public class FriendActivity extends ListActivity {
         
         searchText = (EditText)this.findViewById(R.id.search_text);
         searchBar = (LinearLayout)this.findViewById(R.id.friend_search);
+        searchBar.setOnClickListener(new OnClickListener(){
+
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				searchText.requestFocus();
+			}
+        	
+        });
         searchBar.setOnFocusChangeListener(new OnFocusChangeListener(){
 
 			public void onFocusChange(View v, boolean hasFocus) {
 				// TODO Auto-generated method stub
 				searchText.requestFocus();
+			
 			}});
         
         FillList();
