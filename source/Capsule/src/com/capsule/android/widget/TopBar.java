@@ -4,14 +4,13 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.util.TypedValue;
-import android.view.LayoutInflater;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.RelativeLayout;
 
 import com.capsule.android.R;
 
 public class TopBar extends RelativeLayout {
 
+	@SuppressWarnings("deprecation")
 	public TopBar(Context context) {
 		super(context);
 		// TODO Auto-generated constructor stub
@@ -46,6 +45,7 @@ public class TopBar extends RelativeLayout {
 		this.setMeasuredDimension(width, height);
 	}
 
+	@SuppressWarnings("deprecation")
 	private void setBackground()
 	{
 		Drawable bg = this.getResources().getDrawable(R.drawable.blue_background_normal);
@@ -54,7 +54,7 @@ public class TopBar extends RelativeLayout {
 		
 	}
 	
-	private int getMeasureWidth()
+	/*private int getMeasureWidth()
 	{
 		return getResources().getDisplayMetrics().widthPixels;
 	}
@@ -66,6 +66,6 @@ public class TopBar extends RelativeLayout {
 				50, 
 				getResources().getDisplayMetrics());
 	
-	}
+	}*/
 	
 }

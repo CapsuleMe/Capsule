@@ -16,5 +16,8 @@
     <string name="register_agreement">注册即您表示同意</string>
     <string name="register_agreement2"><u>使用条款和隐私协议</u></string>
     <string name="register_put_username">请输入您的姓名</string>
-
+    <string name="find_friend">找TA</string>
+    <string name="family_text">亲密</string>
+    <string name="friend_text">好友</string>
+    <string name="search_friend_hint">搜索联系人</string>
 </resources>
