@@ -707,11 +707,13 @@ containing a value of this type.
         public static final int register_btn_press=0x7f020059;
         public static final int register_btn_selector=0x7f02005a;
         public static final int round_blue_btn=0x7f02005b;
-        public static final int round_btn=0x7f02005c;
-        public static final int round_edittext=0x7f02005d;
-        public static final int search_icon=0x7f02005e;
-        public static final int thin_round_edittext=0x7f02005f;
-        public static final int welcome_bg=0x7f020060;
+        public static final int round_blue_btn_normal=0x7f02005c;
+        public static final int round_blue_btn_pressed=0x7f02005d;
+        public static final int round_btn=0x7f02005e;
+        public static final int round_edittext=0x7f02005f;
+        public static final int search_icon=0x7f020060;
+        public static final int thin_round_edittext=0x7f020061;
+        public static final int welcome_bg=0x7f020062;
     }
     public static final class id {
         public static final int bottom=0x7f050008;
@@ -826,7 +828,10 @@ containing a value of this type.
     }
     public static final class string {
         public static final int app_name=0x7f08001c;
+        public static final int family_text=0x7f08002d;
+        public static final int find_friend=0x7f08002c;
         public static final int forget_password=0x7f080028;
+        public static final int friend_text=0x7f08002e;
         public static final int gd_add=0x7f08000b;
         public static final int gd_all_friends=0x7f080017;
         public static final int gd_compass=0x7f080010;
@@ -866,6 +871,7 @@ containing a value of this type.
         public static final int register_agreement=0x7f080029;
         public static final int register_agreement2=0x7f08002a;
         public static final int register_put_username=0x7f08002b;
+        public static final int search_friend_hint=0x7f08002f;
         public static final int title_activity_login=0x7f080020;
         public static final int title_activity_main=0x7f08001f;
         public static final int title_activity_register=0x7f080021;
