@@ -3,6 +3,7 @@ package com.capsule.common;
 import android.content.Context;
 import android.content.Intent;
 
+import com.capsule.android.FriendActivity;
 import com.capsule.android.LoginActivity;
 import com.capsule.android.MainActivity;
 import com.capsule.android.RegisterActivity;
@@ -26,16 +27,16 @@ public class Navigator {
 	/**
 	 * @param The component class that is to be used for the intent
 	 */
-	public void swtichTo(Class<?> cls)
+	public void switchTo(Class<?> cls)
 	{
-		swtichTo(cls,null);
+		switchTo(cls,null);
 	}
 	
 	/**
 	 * @param cls The component class that is to be used for the intent
 	 * @param src Copy all extras in "src" to new intent
 	 */
-	public void swtichTo(Class<?> cls,Intent src)
+	public void switchTo(Class<?> cls,Intent src)
 	{
       Intent intent = new Intent(myContext,cls);
       if(src != null)
@@ -48,7 +49,7 @@ public class Navigator {
 	/**
 	 * @param seq Activity SEQ number, you can use Navigator.MainActivtySEQ to switch
 	 */
-	public void swtichTo(int seq)
+	public void switchTo(int seq)
 	{
 		switchTo(seq,null);
 	}
@@ -60,12 +61,17 @@ public class Navigator {
 	public void switchTo(int seq, Intent src){
 		switch(seq) {
 		    case MainActivitySEQ:
-		        swtichTo(MainActivity.class, src);
+		        switchTo(MainActivity.class, src);
+		        break;
 		    case LoginActivitySEQ:
-                swtichTo(LoginActivity.class, src);
+                switchTo(LoginActivity.class, src);
                 break;
             case RegistActivitySEQ:
-                swtichTo(RegisterActivity.class, src);
+                switchTo(RegisterActivity.class, src);
+                break;
+            case FriendListActivitySEQ:
+                switchTo(FriendActivity.class, src);
+                break;
             default:
                 break;
         }
