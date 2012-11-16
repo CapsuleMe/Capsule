@@ -50,12 +50,12 @@ public class LoginActivity extends BaseActivity {
 
 	public void gotoRegistActivity(View target)
 	{
-	   myNavigator.swtichTo(Navigator.RegistActivitySEQ);
+	   myNavigator.switchTo(Navigator.RegistActivitySEQ);
 	}
 	
 	public void gotoForgetPasswordActivity(View targert)
 	{
-		myNavigator.swtichTo(Navigator.ForgertPasswordSEQ);
+		myNavigator.switchTo(Navigator.ForgertPasswordSEQ);
 	}
 	
 	public void doLogin(View targert)
@@ -89,7 +89,7 @@ public class LoginActivity extends BaseActivity {
 	
 	private void gotoNext()
 	{
-		myNavigator.swtichTo(Navigator.MainActivitySEQ);
+		myNavigator.switchTo(Navigator.MainActivitySEQ);
 		this.finish();
 	}
 }
