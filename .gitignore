@@ -162,3 +162,5 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+source/Capsule/gen/com/capsule/android/R.java
+source/Capsule/gen/com/cyrilmottier/android/greendroid/R.java
