@@ -38,7 +38,7 @@ public class BottomTabActivity extends TabActivity {
 	    initialTabs();
 	    initialMenuBar();
 
-	    currentTabId = 1;
+	    currentTabId = 0;
 
 	}
 
@@ -78,9 +78,14 @@ public class BottomTabActivity extends TabActivity {
 	}
 
 	public void setCurrentTab(int index){
+		  int tabCount = tabHost.getTabWidget().getTabCount();
+		  if(index<0 || index >= tabCount)
+			  return;
+		
 		   lastView = tabHost.getCurrentView();
 		   lastTabId = currentTabId;
 
+		   
 		   currentTabId = index;
 		   tabHost.setCurrentTab(index);
 		   menuBar.setButtonSelected(index, true);
