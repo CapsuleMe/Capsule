@@ -3,6 +3,7 @@ package com.capsule.common;
 import android.content.Context;
 import android.content.Intent;
 
+import com.capsule.android.BottomTabActivity;
 import com.capsule.android.FriendActivity;
 import com.capsule.android.LoginActivity;
 import com.capsule.android.MainActivity;
@@ -16,6 +17,7 @@ public class Navigator {
 	public final static int RegistActivitySEQ = 2;
 	public final static int ForgertPasswordSEQ = 3;
 	public final static int FriendListActivitySEQ = 10;
+	public final static int BottomTabActivitySEQ = 11;
 	
 	private Context myContext = null;
 	
@@ -71,6 +73,9 @@ public class Navigator {
                 break;
             case FriendListActivitySEQ:
                 switchTo(FriendActivity.class, src);
+                break;
+            case BottomTabActivitySEQ:
+                switchTo(BottomTabActivity.class, src);
                 break;
             default:
                 break;
