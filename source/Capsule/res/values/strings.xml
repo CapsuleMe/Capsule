@@ -19,5 +19,9 @@
     <string name="find_friend">找TA</string>
     <string name="family_text">亲密</string>
     <string name="friend_text">好友</string>
+    <string name="all_friends_text">全部</string>
     <string name="search_friend_hint">搜索联系人</string>
+    <string name="current_position">定位当前位置</string>
+    <string name="foreground">capsule_foreground</string>
+    <string name="debug_tag">capsule</string>
 </resources>

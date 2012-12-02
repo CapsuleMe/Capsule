@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+	 <com.baidu.mapapi.MapView 
+	    android:id="@+id/mapView"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent" 
+		android:clickable="true" />
+	 <RelativeLayout android:id="@+id/mapTabLayout"
+	   android:layout_width="fill_parent"
+	   android:layout_height="50dp"
+	   android:orientation="horizontal"
+	   android:layout_alignParentTop="true"
+	   android:layout_margin="5dp"
+	   android:background="@drawable/round_mapbar">
+
+	   		<LinearLayout
+	   		    android:layout_width="wrap_content"
+	   		    android:layout_height="fill_parent"
+	   		    android:layout_alignParentLeft="true"
+	   		    android:orientation="vertical"
+	   		    android:background="@null"
+	   		    android:gravity="center_vertical">
+				   			
+			    <LinearLayout
+	   		    	android:orientation="horizontal"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content" >
+			
+			        <TextView
+			            android:id="@+id/allBtn"
+					    android:gravity="center_horizontal|center_vertical"
+					    android:layout_width="53dp"
+					    android:layout_height="fill_parent"
+					    android:text="@string/all_friends_text"
+					    android:textSize="18sp"
+		   				android:textStyle="bold"
+					    android:layout_marginRight="12dp"
+						android:textColor="@color/textColor" />
+			
+			        <TextView
+			            android:id="@+id/familyBtn"
+					    android:gravity="center_horizontal|center_vertical"
+					    android:layout_width="53dp"
+					    android:layout_height="fill_parent"
+					    android:text="@string/family_text"
+					    android:textSize="18sp"
+		   				android:textStyle="bold"
+						android:textColor="@color/textColor" 
+					    android:layout_marginRight="12dp"/>
+			
+			        <TextView
+					    android:id="@+id/friendBtn"
+					    android:gravity="center_horizontal|center_vertical"
+					    android:layout_width="53dp"
+					    android:layout_height="fill_parent"
+					    android:text="@string/friend_text"
+					    android:textSize="18sp"
+		   				android:textStyle="bold"
+					    android:layout_marginRight="12dp"
+						android:textColor="@color/textColor"/>
+			    </LinearLayout>
+			<com.capsule.android.widget.MapBarTextView
+			    android:id="@+id/cursor"
+			    android:gravity="center_horizontal|center_vertical"
+			    android:layout_width="53dp"
+			    android:layout_height="3dp"/>
+	   		</LinearLayout>
+	   		<LinearLayout 
+	   		    android:layout_width="wrap_content"
+	   			android:layout_height="fill_parent"
+	   			android:orientation="horizontal"
+	   			android:gravity="center_vertical"
+	   		    android:layout_alignParentRight="true">
+		   		<View 
+			    	android:layout_width="1dp"
+			        android:layout_height="fill_parent"
+			        android:background="@color/grey"
+			        android:layout_marginRight="8dp"
+			        android:focusable="false"/>
+	   			<ImageButton 
+	   			    android:layout_width="30dp"
+			        android:layout_height="30dp"
+			        android:onClick="showCurrentLocation"
+			        android:contentDescription="@string/current_position"
+	   			    android:background="@drawable/position_button_selector"/>
+	   		</LinearLayout>
+	   </RelativeLayout>
+	   
+	<LinearLayout
+	   android:layout_width="wrap_content"
+	   android:layout_height="wrap_content"
+	   android:orientation="horizontal"
+	   android:layout_alignParentRight="true"
+	   android:layout_alignParentBottom="true"
+	   android:layout_margin="10dp">
+		<Button android:id="@+id/zoomoutBtn"
+            android:layout_width="55dp"
+		  	android:layout_height="40dp"
+            android:background="@drawable/zoom_out_button_selector"
+            android:gravity="center"
+            android:onClick="zoomOut"/>
+		 <Button android:id="@+id/zoominBtn"
+		    android:layout_width="55dp"
+		  	android:layout_height="40dp"
+		  	android:gravity="center"
+		  	android:onClick="zoomIn"
+        	android:background="@drawable/zoom_in_button_selector"/>
+		  
+	  </LinearLayout> 
+</RelativeLayout>
