@@ -16,7 +16,7 @@ public class MainActivity extends BaseActivity{
         View layout=findViewById(R.id.welcomeLayout);
         layout.getBackground().setAlpha(180);
         
-       myNavigator.switchTo(Navigator.FriendListActivitySEQ);
+       myNavigator.switchTo(Navigator.BottomTabActivitySEQ);
     }
 
     

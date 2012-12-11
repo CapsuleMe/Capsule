@@ -22,6 +22,10 @@ public final class R {
         public static final int gd_shrink_from_top=0x7f04000a;
         public static final int gd_shrink_from_topleft_to_bottomright=0x7f04000b;
         public static final int gd_shrink_from_topright_to_bottomleft=0x7f04000c;
+        public static final int in_left_right=0x7f04000d;
+        public static final int in_right_left=0x7f04000e;
+        public static final int out_left_right=0x7f04000f;
+        public static final int out_right_left=0x7f040010;
     }
     public static final class attr {
         /** <p>Must be an integer value, such as "<code>100</code>".
@@ -655,6 +659,7 @@ containing a value of this type.
         public static final int gd_action_bar_take_photo=0x7f020022;
         public static final int gd_action_bar_talk=0x7f020023;
         public static final int gd_action_bar_trashcan=0x7f020024;
+<<<<<<< HEAD
         public static final int gd_page_indicator_dot=0x7f020025;
         public static final int gd_page_indicator_dot_focused=0x7f020026;
         public static final int gd_page_indicator_dot_normal=0x7f020027;
@@ -728,6 +733,87 @@ containing a value of this type.
         public static final int zoomin_btn_press=0x7f02006b;
         public static final int zoomout_btn=0x7f02006c;
         public static final int zoomout_btn_press=0x7f02006d;
+=======
+        public static final int gd_map_pin_base=0x7f020025;
+        public static final int gd_map_pin_dot=0x7f020026;
+        public static final int gd_map_pin_pin=0x7f020027;
+        public static final int gd_page_indicator_dot=0x7f020028;
+        public static final int gd_page_indicator_dot_focused=0x7f020029;
+        public static final int gd_page_indicator_dot_normal=0x7f02002a;
+        public static final int gd_page_indicator_dot_normal_focused=0x7f02002b;
+        public static final int gd_page_indicator_dot_normal_normal=0x7f02002c;
+        public static final int gd_page_indicator_dot_normal_pressed=0x7f02002d;
+        public static final int gd_page_indicator_dot_pressed=0x7f02002e;
+        public static final int gd_page_indicator_dot_selected=0x7f02002f;
+        public static final int gd_page_indicator_dot_selected_focused=0x7f020030;
+        public static final int gd_page_indicator_dot_selected_normal=0x7f020031;
+        public static final int gd_page_indicator_dot_selected_pressed=0x7f020032;
+        public static final int gd_quick_action_arrow_up=0x7f020033;
+        public static final int gd_quick_action_bar_arrow_down=0x7f020034;
+        public static final int gd_quick_action_bar_background=0x7f020035;
+        public static final int gd_quick_action_bar_bottom_frame=0x7f020036;
+        public static final int gd_quick_action_bar_grip_left=0x7f020037;
+        public static final int gd_quick_action_bar_grip_right=0x7f020038;
+        public static final int gd_quick_action_bar_item=0x7f020039;
+        public static final int gd_quick_action_bar_item_normal=0x7f02003a;
+        public static final int gd_quick_action_bar_item_pressed=0x7f02003b;
+        public static final int gd_quick_action_bar_item_selected=0x7f02003c;
+        public static final int gd_quick_action_grid_arrow_down=0x7f02003d;
+        public static final int gd_quick_action_grid_bg=0x7f02003e;
+        public static final int gd_quick_action_grid_bottom_frame=0x7f02003f;
+        public static final int gd_quick_action_grid_selector=0x7f020040;
+        public static final int gd_quick_action_grid_selector_focused=0x7f020041;
+        public static final int gd_quick_action_grid_selector_pressed=0x7f020042;
+        public static final int gd_quick_action_top_frame=0x7f020043;
+        public static final int gd_segment_checkmark=0x7f020044;
+        public static final int gd_segment_checkmark_off=0x7f020045;
+        public static final int gd_segment_checkmark_on=0x7f020046;
+        public static final int gd_segment_divider=0x7f020047;
+        public static final int gd_segment_label=0x7f020048;
+        public static final int gd_segment_label_focused=0x7f020049;
+        public static final int gd_segment_label_normal=0x7f02004a;
+        public static final int gd_segment_label_pressed=0x7f02004b;
+        public static final int gd_shadow_bottom=0x7f02004c;
+        public static final int gd_shadow_top=0x7f02004d;
+        public static final int gd_tab_indicator=0x7f02004e;
+        public static final int gd_tab_indicator_normal=0x7f02004f;
+        public static final int gd_tab_indicator_pressed=0x7f020050;
+        public static final int gd_tab_indicator_selected=0x7f020051;
+        public static final int gd_tab_indicator_unselected=0x7f020052;
+        public static final int ic_action_search=0x7f020053;
+        public static final int ic_launcher=0x7f020054;
+        public static final int icon_bottom_1=0x7f020055;
+        public static final int icon_bottom_2=0x7f020056;
+        public static final int icon_bottom_3=0x7f020057;
+        public static final int icon_bottom_4=0x7f020058;
+        public static final int icon_bottom_5=0x7f020059;
+        public static final int icon_bottom_bg_1=0x7f02005a;
+        public static final int icon_bottom_bg_2=0x7f02005b;
+        public static final int icon_bottom_normal_1=0x7f02005c;
+        public static final int icon_bottom_normal_2=0x7f02005d;
+        public static final int icon_bottom_normal_3=0x7f02005e;
+        public static final int icon_bottom_normal_4=0x7f02005f;
+        public static final int icon_bottom_normal_5=0x7f020060;
+        public static final int icon_bottom_pressed_1=0x7f020061;
+        public static final int icon_bottom_pressed_2=0x7f020062;
+        public static final int icon_bottom_pressed_3=0x7f020063;
+        public static final int icon_bottom_pressed_4=0x7f020064;
+        public static final int icon_bottom_pressed_5=0x7f020065;
+        public static final int login_btn=0x7f020066;
+        public static final int login_btn_press=0x7f020067;
+        public static final int login_btn_selector=0x7f020068;
+        public static final int register_btn=0x7f020069;
+        public static final int register_btn_press=0x7f02006a;
+        public static final int register_btn_selector=0x7f02006b;
+        public static final int round_blue_btn=0x7f02006c;
+        public static final int round_blue_btn_normal=0x7f02006d;
+        public static final int round_blue_btn_pressed=0x7f02006e;
+        public static final int round_btn=0x7f02006f;
+        public static final int round_edittext=0x7f020070;
+        public static final int search_icon=0x7f020071;
+        public static final int thin_round_edittext=0x7f020072;
+        public static final int welcome_bg=0x7f020073;
+>>>>>>> master
     }
     public static final class id {
         public static final int allBtn=0x7f050025;
@@ -737,10 +823,12 @@ containing a value of this type.
         public static final int center_vertical=0x7f05000b;
         public static final int cursor=0x7f050028;
         public static final int dashboard=0x7f050001;
+<<<<<<< HEAD
         public static final int editTextNumber=0x7f05001a;
         public static final int editTextPassword=0x7f05001b;
-        public static final int editTextUsername=0x7f050020;
+        public static final int editTextUsername=0x7f050022;
         public static final int empty=0x7f050002;
+<<<<<<< HEAD
         public static final int familyBtn=0x7f050026;
         public static final int friendBtn=0x7f050027;
         public static final int friend_address=0x7f05002f;
@@ -790,25 +878,140 @@ containing a value of this type.
         public static final int radio1=0x7f050032;
         public static final int radio2=0x7f050033;
         public static final int radioGroup1=0x7f050030;
+=======
+        public static final int friend_address=0x7f050029;
+        public static final int friend_distance=0x7f050027;
+        public static final int friend_head=0x7f050025;
+        public static final int friend_name=0x7f050028;
+        public static final int friend_search=0x7f050018;
+        public static final int friend_time=0x7f050026;
+        public static final int friend_top_bar=0x7f050015;
+        public static final int gd_action_bar=0x7f050012;
+        public static final int gd_action_bar_content_view=0x7f050014;
+        public static final int gd_action_bar_home_item=0x7f050032;
+        public static final int gd_action_bar_host=0x7f050013;
+        public static final int gd_action_bar_item=0x7f050034;
+        public static final int gd_action_bar_item_progress_bar=0x7f050035;
+        public static final int gd_action_bar_title=0x7f050033;
+        public static final int gd_description=0x7f050036;
+        public static final int gd_drawable=0x7f050037;
+        public static final int gd_progress_bar=0x7f050039;
+        public static final int gd_segmented_bar=0x7f050010;
+        public static final int gd_segmented_content_view=0x7f050011;
+        public static final int gd_separator_text=0x7f050042;
+        public static final int gd_subtext=0x7f050043;
+        public static final int gd_subtitle=0x7f050044;
+        public static final int gd_text=0x7f050038;
+        public static final int gd_thumbnail=0x7f050045;
+        public static final int gdi_arrow_down=0x7f050040;
+        public static final int gdi_arrow_up=0x7f05003b;
+        public static final int gdi_footer=0x7f05003f;
+        public static final int gdi_grid=0x7f050041;
+        public static final int gdi_header=0x7f05003a;
+        public static final int gdi_quick_action_items=0x7f05003e;
+        public static final int gdi_rack=0x7f05003d;
+        public static final int gdi_scroll=0x7f05003c;
+=======
+        public static final int editTextNumber=0x7f05001b;
+        public static final int editTextPassword=0x7f05001c;
+        public static final int editTextUsername=0x7f050021;
+        public static final int empty=0x7f050002;
+        public static final int friend_address=0x7f050028;
+        public static final int friend_distance=0x7f050026;
+        public static final int friend_head=0x7f050024;
+        public static final int friend_name=0x7f050027;
+        public static final int friend_search=0x7f050019;
+        public static final int friend_time=0x7f050025;
+        public static final int friend_top_bar=0x7f050016;
+        public static final int gd_action_bar=0x7f050012;
+        public static final int gd_action_bar_content_view=0x7f050014;
+        public static final int gd_action_bar_home_item=0x7f05002d;
+        public static final int gd_action_bar_host=0x7f050013;
+        public static final int gd_action_bar_item=0x7f05002f;
+        public static final int gd_action_bar_item_progress_bar=0x7f050030;
+        public static final int gd_action_bar_title=0x7f05002e;
+        public static final int gd_description=0x7f050031;
+        public static final int gd_drawable=0x7f050032;
+        public static final int gd_progress_bar=0x7f050034;
+        public static final int gd_segmented_bar=0x7f050010;
+        public static final int gd_segmented_content_view=0x7f050011;
+        public static final int gd_separator_text=0x7f05003d;
+        public static final int gd_subtext=0x7f05003e;
+        public static final int gd_subtitle=0x7f05003f;
+        public static final int gd_text=0x7f050033;
+        public static final int gd_thumbnail=0x7f050040;
+        public static final int gdi_arrow_down=0x7f05003b;
+        public static final int gdi_arrow_up=0x7f050036;
+        public static final int gdi_footer=0x7f05003a;
+        public static final int gdi_grid=0x7f05003c;
+        public static final int gdi_header=0x7f050035;
+        public static final int gdi_quick_action_items=0x7f050039;
+        public static final int gdi_rack=0x7f050038;
+        public static final int gdi_scroll=0x7f050037;
+>>>>>>> 0183089cd1d05b4924da5eb1a55a28e19b9a480c
+        public static final int hdpi=0x7f050005;
+        public static final int ldpi=0x7f050003;
+        public static final int left=0x7f050009;
+        public static final int loginBtn=0x7f05001e;
+        public static final int mdpi=0x7f050004;
+<<<<<<< HEAD
+        public static final int menu_settings=0x7f050046;
+        public static final int message_content=0x7f05002d;
+        public static final int message_head=0x7f05002a;
+        public static final int message_name=0x7f05002c;
+        public static final int message_search=0x7f050020;
+        public static final int message_search_text=0x7f050021;
+        public static final int message_time=0x7f05002b;
+        public static final int multiple=0x7f05000f;
+        public static final int normal=0x7f050000;
+        public static final int radio0=0x7f05002f;
+        public static final int radio1=0x7f050030;
+        public static final int radio2=0x7f050031;
+        public static final int radioGroup1=0x7f05002e;
+>>>>>>> master
         public static final int radio_family=0x7f050016;
         public static final int radio_friend=0x7f050017;
         public static final int registerBtn=0x7f05001f;
+=======
+        public static final int menu_settings=0x7f050041;
+        public static final int menubar=0x7f050015;
+        public static final int multiple=0x7f05000f;
+        public static final int normal=0x7f050000;
+        public static final int radio0=0x7f05002a;
+        public static final int radio1=0x7f05002b;
+        public static final int radio2=0x7f05002c;
+        public static final int radioGroup1=0x7f050029;
+        public static final int radio_family=0x7f050017;
+        public static final int radio_friend=0x7f050018;
+        public static final int registerBtn=0x7f050020;
+>>>>>>> 0183089cd1d05b4924da5eb1a55a28e19b9a480c
         public static final int right=0x7f05000a;
-        public static final int search_text=0x7f050019;
+        public static final int search_text=0x7f05001a;
         public static final int single=0x7f05000e;
-        public static final int textAgreement=0x7f050021;
-        public static final int textAgreement2=0x7f050022;
+<<<<<<< HEAD
+        public static final int textAgreement=0x7f050023;
+        public static final int textAgreement2=0x7f050024;
         public static final int textForgetPassword=0x7f05001c;
+=======
+        public static final int textAgreement=0x7f050022;
+        public static final int textAgreement2=0x7f050023;
+        public static final int textForgetPassword=0x7f05001d;
+>>>>>>> 0183089cd1d05b4924da5eb1a55a28e19b9a480c
         public static final int top=0x7f050007;
-        public static final int welcomeLayout=0x7f05001e;
+        public static final int welcomeLayout=0x7f05001f;
         public static final int xhdpi=0x7f050006;
         public static final int zoominBtn=0x7f05002a;
         public static final int zoomoutBtn=0x7f050029;
     }
+    public static final class integer {
+        public static final int slide_duration=0x7f0a0000;
+    }
     public static final class layout {
+<<<<<<< HEAD
         public static final int activity_friend=0x7f030000;
         public static final int activity_login=0x7f030001;
         public static final int activity_main=0x7f030002;
+<<<<<<< HEAD
         public static final int activity_register=0x7f030003;
         public static final int baidu_map=0x7f030004;
         public static final int capsule_friend_item_view=0x7f030005;
@@ -845,11 +1048,69 @@ containing a value of this type.
         public static final int gd_thumbnail_item_view=0x7f030024;
         public static final int popview=0x7f030025;
         public static final int top_bar=0x7f030026;
+=======
+        public static final int activity_message=0x7f030003;
+        public static final int activity_register=0x7f030004;
+        public static final int capsule_friend_item_view=0x7f030005;
+        public static final int capsule_message_item_view=0x7f030006;
+=======
+        public static final int activity_bottomtab=0x7f030000;
+        public static final int activity_friend=0x7f030001;
+        public static final int activity_login=0x7f030002;
+        public static final int activity_main=0x7f030003;
+        public static final int activity_register=0x7f030004;
+        public static final int bottom_bar=0x7f030005;
+        public static final int capsule_friend_item_view=0x7f030006;
+>>>>>>> 0183089cd1d05b4924da5eb1a55a28e19b9a480c
+        public static final int friend_top_bar=0x7f030007;
+        public static final int gd_action_bar_dashboard=0x7f030008;
+        public static final int gd_action_bar_empty=0x7f030009;
+        public static final int gd_action_bar_item_base=0x7f03000a;
+        public static final int gd_action_bar_item_loader=0x7f03000b;
+        public static final int gd_action_bar_normal=0x7f03000c;
+        public static final int gd_content_dashboard=0x7f03000d;
+        public static final int gd_content_empty=0x7f03000e;
+        public static final int gd_content_normal=0x7f03000f;
+        public static final int gd_description_item_view=0x7f030010;
+        public static final int gd_drawable_item_view=0x7f030011;
+        public static final int gd_expandable_list_content_dashboard=0x7f030012;
+        public static final int gd_expandable_list_content_empty=0x7f030013;
+        public static final int gd_expandable_list_content_normal=0x7f030014;
+        public static final int gd_list_content_dashboard=0x7f030015;
+        public static final int gd_list_content_empty=0x7f030016;
+        public static final int gd_list_content_normal=0x7f030017;
+        public static final int gd_long_text_item_view=0x7f030018;
+        public static final int gd_progress_item_view=0x7f030019;
+        public static final int gd_quick_action_bar=0x7f03001a;
+        public static final int gd_quick_action_bar_item=0x7f03001b;
+        public static final int gd_quick_action_grid=0x7f03001c;
+        public static final int gd_quick_action_grid_item=0x7f03001d;
+        public static final int gd_segment=0x7f03001e;
+        public static final int gd_separator_item_view=0x7f03001f;
+        public static final int gd_subtext_item_view=0x7f030020;
+        public static final int gd_subtitle_item_view=0x7f030021;
+        public static final int gd_tab_content=0x7f030022;
+        public static final int gd_tab_indicator=0x7f030023;
+        public static final int gd_text_item_view=0x7f030024;
+        public static final int gd_thumbnail_item_view=0x7f030025;
+<<<<<<< HEAD
+        public static final int name_card_details=0x7f030026;
+        public static final int top_bar=0x7f030027;
+>>>>>>> master
     }
     public static final class menu {
         public static final int activity_friend=0x7f0a0000;
         public static final int activity_login=0x7f0a0001;
         public static final int activity_main=0x7f0a0002;
+        public static final int activity_message=0x7f0a0003;
+=======
+        public static final int top_bar=0x7f030026;
+    }
+    public static final class menu {
+        public static final int activity_friend=0x7f0b0000;
+        public static final int activity_login=0x7f0b0001;
+        public static final int activity_main=0x7f0b0002;
+>>>>>>> 0183089cd1d05b4924da5eb1a55a28e19b9a480c
     }
     public static final class string {
         public static final int all_friends_text=0x7f08002f;
@@ -903,6 +1164,7 @@ containing a value of this type.
         public static final int search_friend_hint=0x7f080030;
         public static final int title_activity_login=0x7f080020;
         public static final int title_activity_main=0x7f08001f;
+        public static final int title_activity_message=0x7f080030;
         public static final int title_activity_register=0x7f080021;
     }
     public static final class style {
