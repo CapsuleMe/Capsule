@@ -8,7 +8,7 @@ import android.content.SharedPreferences.Editor;
 
 public class SharePreferencesEditor {
 
-	public  static String SettingsName = "settings";
+	public static String SettingsName = "settings";
 	
 	private Context myContext = null;
 	private SharedPreferences preferences = null; 

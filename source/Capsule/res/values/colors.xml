@@ -4,6 +4,7 @@
 	<color name="black">#000000</color>
 	<color name="grey">#CCCCCC</color>
 	<color name="textColor">#656565</color>
+	<color name="textBlue">#006699</color>
 	<color name="map_button_background">#ddf4f4f4</color>
     <color name="map_button_border">#B8B8B6</color>
 </resources>

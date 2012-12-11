@@ -10,6 +10,8 @@
     <string name="login">登录</string>
     <string name="password">密码</string>
     <string name="input_password">请输入密码</string>
+    <string name="exit">退出</string>
+    <string name="logout">注销登录</string>
     <string name="number">号码</string>
     <string name="input_number">请输入手机号码</string>
     <string name="forget_password"><u>忘记密码？</u></string>
@@ -23,5 +25,14 @@
     <string name="search_friend_hint">搜索联系人</string>
     <string name="current_position">定位当前位置</string>
     <string name="foreground">capsule_foreground</string>
-    <string name="debug_tag">capsule</string>
+    <string name="debug_tag">Capsule</string>
+    <string name="login_name">登录名</string>
+    <string name="find_him">找TA</string>
+    <string name="match_contacts">匹配手机通讯录</string>
+    <string name="capsule_agreement">胶囊位置契约</string>
+    <string name="update_position_rate">您的位置更新频率</string>
+    <string name="warn_setting">提醒铃声设置</string>
+    <string name="hiding_position">隐身</string>
+    <string name="update_password">修改密码</string>
+    <string name="about_capsule">关于位置胶囊</string>
 </resources>
