@@ -70,7 +70,6 @@ public abstract class BaiduMapOverlayActivity extends BaiduMapActivity implement
         return mMapView;
     }
     
-    @Override
     public void update(Observable observable, Object data) {
         showCurrentLocation(false);
     }
