@@ -45,7 +45,7 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".FriendActivity" />
-        <activity android:name=".BottomTabActivity" />
+        <activity android:name=".BottomTabActivity" android:windowSoftInputMode="adjustPan"/>"
         <activity android:name=".MessageActivity" />
 
         <service android:name=".service.LocationService" >
