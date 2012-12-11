@@ -20,4 +20,6 @@
     <string name="family_text">亲密</string>
     <string name="friend_text">好友</string>
     <string name="search_friend_hint">搜索联系人</string>
+    <string name="title_activity_message">MessageActivity</string>
+
 </resources>

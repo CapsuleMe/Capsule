@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.capsule.android.widget.itemview.MessageItemView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	style="?attr/gdThumbnailItemViewStyle"
+	android:layout_height="wrap_content"
+	android:minHeight="?attr/gdItemViewPreferredHeight"
+	android:paddingLeft="?attr/gdItemViewPreferredPaddingLeft"
+	android:paddingRight="?attr/gdItemViewPreferredPaddingLeft"
+	android:background="#FFFFFF" xmlns:app="http://schemas.android.com/apk/res/com.capsule.android">
+	
+	<greendroid.widget.AsyncImageView
+		style="?attr/gdThumbnailItemViewStyleThumbnail"
+		android:id="@+id/message_head"
+		android:layout_height="?attr/gdItemViewPreferredHeight"
+		android:scaleType="centerInside"/>
+
+    <TextView
+		style="?attr/gdThumbnailItemViewStyleSubtitle"
+		android:id="@+id/message_time"
+		android:layout_alignParentRight="true"
+		android:layout_width="wrap_content"
+		android:gravity="bottom"
+		android:singleLine="true"
+		android:ellipsize="end" 
+		android:text="time"
+		android:textColor="#989898"/>
+    
+	<TextView
+	    android:id="@+id/message_name"
+	    style="?attr/gdThumbnailItemViewStyleText"
+	    android:layout_width="fill_parent"
+	    android:layout_toLeftOf="@id/message_time"
+	    android:layout_toRightOf="@id/message_head"
+	    android:ellipsize="end"
+	    android:gravity="bottom"
+	    android:singleLine="true"
+	    android:text="name"
+	    android:textColor="#111111"
+	    android:textSize="18sp" />
+
+	<TextView
+		style="?attr/gdThumbnailItemViewStyleSubtitle"
+		android:id="@+id/message_content"
+		android:layout_width="fill_parent"
+		android:layout_toRightOf="@id/message_head"
+		android:layout_below="@+id/message_name"
+		android:layout_alignLeft="@id/message_name"
+		android:layout_alignParentBottom="true"
+		android:gravity="center_vertical"
+		android:singleLine="true"
+		android:ellipsize="end" 
+		android:text="address"
+		android:textColor="#989898"/>
+
+</com.capsule.android.widget.itemview.MessageItemView>
