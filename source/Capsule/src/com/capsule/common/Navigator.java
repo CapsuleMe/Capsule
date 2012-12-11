@@ -6,6 +6,7 @@ import android.content.Intent;
 import com.capsule.android.FriendActivity;
 import com.capsule.android.LoginActivity;
 import com.capsule.android.MainActivity;
+import com.capsule.android.MessageActivity;
 import com.capsule.android.RegisterActivity;
 
 public class Navigator {
@@ -16,6 +17,7 @@ public class Navigator {
 	public final static int RegistActivitySEQ = 2;
 	public final static int ForgertPasswordSEQ = 3;
 	public final static int FriendListActivitySEQ = 10;
+	public final static int MessageActivitySEQ = 11;
 	
 	private Context myContext = null;
 	
@@ -71,6 +73,9 @@ public class Navigator {
                 break;
             case FriendListActivitySEQ:
                 switchTo(FriendActivity.class, src);
+                break;
+            case MessageActivitySEQ:
+                switchTo(MessageActivity.class, src);
                 break;
             default:
                 break;
