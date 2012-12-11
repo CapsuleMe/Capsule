@@ -1,22 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-/*
-** Copyright (C) 2010 Cyril Mottier (http://www.cyrilmottier.com)
-**
-** Licensed under the Apache License, Version 2.0 (the "License");
-** you may not use this file except in compliance with the License.
-** You may obtain a copy of the License at
-**
-**     http://www.apache.org/licenses/LICENSE-2.0
-**
-** Unless required by applicable law or agreed to in writing, software
-** distributed under the License is distributed on an "AS IS" BASIS,
-** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-** See the License for the specific language governing permissions and
-** limitations under the License.
-*/
--->
-
 <com.capsule.android.widget.itemview.FriendItemView
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	style="?attr/gdThumbnailItemViewStyle"
@@ -42,7 +24,7 @@
 		android:ellipsize="end" 
 		android:text="time"
 		android:textColor="#989898"/>
-    
+    
     <TextView
         android:id="@+id/friend_distance"
         style="?attr/gdThumbnailItemViewStyleText"
@@ -58,7 +40,7 @@
         android:textColor="#006699"
         android:textSize="18sp"
         android:textStyle="bold" />
-			
+			
 	<TextView
 	    android:id="@+id/friend_name"
 	    style="?attr/gdThumbnailItemViewStyleText"
@@ -81,7 +63,7 @@
 		android:layout_below="@+id/friend_name"
 		android:layout_alignLeft="@id/friend_name"
 		android:layout_alignParentBottom="true"
-		android:gravity="center"
+		android:gravity="center_vertical"
 		android:singleLine="true"
 		android:ellipsize="end" 
 		android:text="address"
