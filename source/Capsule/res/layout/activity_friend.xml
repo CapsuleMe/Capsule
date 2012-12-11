@@ -7,12 +7,12 @@
     <RelativeLayout
         android:id="@+id/friend_top_bar"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:background="@drawable/blue_background_normal" >
 
         <Button
             android:layout_width="50dp"
-            android:layout_height="35dp"
+            android:layout_height="30dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="3dp"
@@ -31,7 +31,7 @@
 	        <RadioButton 
 	            android:id="@+id/radio_family"
 	            android:layout_width="80dp"
-		        android:layout_height="40dp"
+		        android:layout_height="35dp"
 		        android:text="@string/family_text"
 		        android:textSize="14sp"
 		        android:gravity="center"
@@ -42,7 +42,7 @@
 	        <RadioButton 
 	            android:id="@+id/radio_friend"
 	            android:layout_width="80dp"
-		        android:layout_height="40dp"
+		        android:layout_height="35dp"
 		        android:text="@string/friend_text"
 		        android:textSize="14sp"
 		        android:gravity="center"
