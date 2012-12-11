@@ -6,7 +6,7 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="15" />
-    
+
     <application
         android:name=".MyApplication"
         android:icon="@drawable/ic_launcher"
@@ -14,22 +14,19 @@
         android:theme="@style/Theme.GreenDroid.NoTitleBar" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_main">
+            android:label="@string/title_activity_main" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".FriendActivity" />
         <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login" >
-        </activity>
-        <activity android:name=".RegisterActivity" 
-            android:label="@string/title_activity_register" >
-        </activity>
-        <activity
-            android:name=".FriendActivity">
+            android:name=".MessageActivity"
+            android:label="@string/title_activity_message" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
