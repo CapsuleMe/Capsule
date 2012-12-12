@@ -60,7 +60,6 @@ public class CapSuleMapActivity extends BaiduMapOverlayActivity{
      */
     public class TabChangeListener implements View.OnClickListener {
         
-        @Override
         public void onClick(View v) {
             Animation animation = null;
             int from=currView.getLeft();

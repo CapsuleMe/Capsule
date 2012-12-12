@@ -25,4 +25,7 @@
     <string name="current_position">定位当前位置</string>
     <string name="foreground">capsule_foreground</string>
     <string name="debug_tag">capsule</string>
+    <string name="title_activity_search_friend">SearchFriendActivity</string>
+    <string name="title_activity_search_friend_result">SearchFriendResultActivity</string>
+
 </resources>
