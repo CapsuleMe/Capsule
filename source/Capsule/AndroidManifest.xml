@@ -61,7 +61,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SearchFriendResultActivity"
+            android:name=".SearchContactActivity"
             android:label="@string/title_activity_search_friend_result" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

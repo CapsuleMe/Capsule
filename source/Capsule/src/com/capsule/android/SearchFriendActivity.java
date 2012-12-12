@@ -1,10 +1,10 @@
 package com.capsule.android;
 
 import android.os.Bundle;
-import android.app.Activity;
 import android.view.Menu;
+import android.view.View;
 
-public class SearchFriendActivity extends Activity {
+public class SearchFriendActivity extends BaseActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -16,5 +16,10 @@ public class SearchFriendActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_search_friend, menu);
         return true;
+    }
+    
+    public void onSearch(View target)
+    {
+    	
     }
 }
