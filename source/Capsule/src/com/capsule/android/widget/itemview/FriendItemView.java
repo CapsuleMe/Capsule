@@ -38,7 +38,7 @@ public class FriendItemView extends RelativeLayout implements ItemView {
 
 	public void prepareItemView() {
 		// TODO Auto-generated method stub
-		mHeadView = (AsyncImageView)findViewById(R.id.friend_head);
+		//mHeadView = (AsyncImageView)findViewById(R.id.friend_head);
 		mNameView = (TextView)findViewById(R.id.friend_name);
 		mAddressView = (TextView)findViewById(R.id.friend_address);
 		mTimeView = (TextView)findViewById(R.id.friend_time);

@@ -36,6 +36,26 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int activeDot=0x7f010054;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int circle=0x7f01005a;
+        /**  Size to round image corners by. Default is zero, unrounded.
+		<b>NOTE:</b> This only works for bitmap image sources. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int corner_radius=0x7f010059;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -1424,6 +1444,54 @@ containing a value of this type.
           @attr name android:isInProgress
         */
         public static final int ProgressItem_isInProgress = 0;
+        /**  Attributes for RoundedImageView 
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #RoundedImageView_circle com.capsule.android:circle}</code></td><td></td></tr>
+           <tr><td><code>{@link #RoundedImageView_corner_radius com.capsule.android:corner_radius}</code></td><td> Size to round image corners by.</td></tr>
+           </table>
+           @see #RoundedImageView_circle
+           @see #RoundedImageView_corner_radius
+         */
+        public static final int[] RoundedImageView = {
+            0x7f010059, 0x7f01005a
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.capsule.android.R.attr#circle}
+          attribute's value can be found in the {@link #RoundedImageView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:circle
+        */
+        public static final int RoundedImageView_circle = 1;
+        /**
+          <p>
+          @attr description
+           Size to round image corners by. Default is zero, unrounded.
+		<b>NOTE:</b> This only works for bitmap image sources. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name android:corner_radius
+        */
+        public static final int RoundedImageView_corner_radius = 0;
         /**  SegmentedBar related attributes 
            <p>Includes the following attributes:</p>
            <table>
