@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/menu_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginBottom="10dip"
+        android:textColor="@color/black"
+        android:textSize="17sp"/>
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_marginBottom="10dip"
+		android:textSize="17sp"
+        android:text="@string/exit" />
+
+    <Button
+        android:id="@+id/cancelBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+		android:textSize="17sp"
+        android:text="@string/cancel" />
+
+</LinearLayout>
