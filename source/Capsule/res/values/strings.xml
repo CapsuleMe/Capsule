@@ -11,6 +11,7 @@
     <string name="password">密码</string>
     <string name="input_password">请输入密码</string>
     <string name="exit">退出</string>
+    <string name="cancel">取消</string>
     <string name="logout">注销登录</string>
     <string name="number">号码</string>
     <string name="input_number">请输入手机号码</string>
@@ -35,4 +36,8 @@
     <string name="hiding_position">隐身</string>
     <string name="update_password">修改密码</string>
     <string name="about_capsule">关于位置胶囊</string>
+    <string name="find_him_by_phone">按手机号码找TA</string>
+    <string name="find_him_by_contact">从手机通讯录找TA</string>
+    <string name="exit_tip_content">退出后，下次您可以直接打开，不需要输入账号密码。</string>
+    <string name="logout_tip_content">注销登录后，下次请使用您的手机号登录胶囊，您确定注销登录吗？</string>
 </resources>
