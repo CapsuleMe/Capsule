@@ -8,7 +8,7 @@ import android.content.Context;
 public class NotificationUtil {
 	
 	private static int icon = 0;
-	private static CharSequence tickerText = "lijiang";
+	private static CharSequence tickerText = "Capsule";
 	
 	public static int getIcon() {
 		return icon;
