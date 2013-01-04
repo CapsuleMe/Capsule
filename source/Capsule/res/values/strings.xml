@@ -11,6 +11,7 @@
     <string name="password">密码</string>
     <string name="input_password">请输入密码</string>
     <string name="exit">退出</string>
+    <string name="submit">确定</string>
     <string name="cancel">取消</string>
     <string name="logout">注销登录</string>
     <string name="number">号码</string>
@@ -40,4 +41,16 @@
     <string name="find_him_by_contact">从手机通讯录找TA</string>
     <string name="exit_tip_content">退出后，下次您可以直接打开，不需要输入账号密码。</string>
     <string name="logout_tip_content">注销登录后，下次请使用您的手机号登录胶囊，您确定注销登录吗？</string>
+    <string name="face_setting">设置头像</string>
+    <string name="user_sex">性别</string>
+    <string name="capsule_name">名称</string>
+    <string name="user_introdue">简介</string>
+    <string name="company">公司</string>
+    <string name="position">职位</string>
+    <string name="school">学校</string>
+    <string name="mobile_phone">手机</string>
+    <string name="qq">QQ</string>
+    <string name="email">邮箱</string>
+    <string name="weibo_sina">新浪微博</string>
+    <string name="choose_template">选择名片模板</string>
 </resources>

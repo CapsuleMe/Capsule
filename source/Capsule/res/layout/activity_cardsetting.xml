@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:id="@+id/cardsetting_layout">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none" >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingBottom="15dip"
+            android:paddingTop="5dip" >
+            
+			<LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:orientation="vertical" >
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_corner_line"
+                        android:paddingLeft="12dip"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip"
+                        android:onClick="showChooseFaceDialog">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:layout_gravity="left|center_vertical"
+                            android:text="@string/face_setting"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" >
+                        </TextView>
+
+				        <ImageView
+				            android:id="@+id/face"
+				            android:layout_width="42dip"
+				            android:layout_height="42dip"
+				            android:layout_marginLeft="10dip"
+				            android:src="@drawable/default_face" />
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_weight="0.1"
+                            android:layout_gravity="right|center_vertical"
+                            android:src="@drawable/arrows_icon" />
+                    </TableRow>
+                </TableLayout>
+          </LinearLayout>  
+          <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:orientation="vertical" >
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_top_corner_no_bottom_line"
+                        android:paddingLeft="12dip"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip"
+                        android:onClick="showCapsuleNameDialog">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="10dip"
+                            android:text="@string/capsule_name"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" >
+                        </TextView>
+						<TextView android:id="@+id/capsuleName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" >
+                        </TextView>
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="right"
+                            android:layout_weight="0.1"
+                            android:src="@drawable/arrows_icon" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_no_corner_without_bottom"
+                        android:paddingLeft="12dip"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip"
+                        android:onClick="showUserIntrodueDialog">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_weight="0.9"
+                            android:text="@string/user_introdue"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+						<TextView android:id="@+id/userIntrodue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" >
+                        </TextView>
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="right"
+                            android:layout_weight="0.1"
+                            android:src="@drawable/arrows_icon" />
+                    </TableRow>
+ 
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_bottom_corner_no_top_line"
+                        android:paddingLeft="12dip"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip"
+                        android:onClick="showUserSexDialog">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:layout_gravity="left"
+                            android:text="@string/user_sex"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" >
+                        </TextView>
+						<TextView android:id="@+id/userSex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" >
+                        </TextView>
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_weight="0.1"
+                            android:layout_gravity="right"
+                            android:src="@drawable/arrows_icon" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:orientation="vertical" >
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_top_corner_no_bottom_line"
+                        android:paddingLeft="12dip"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip"
+                        android:onClick="showUserCompanyDialog">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:layout_column="0"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="10dip"
+                            android:text="@string/company"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" >
+                        </TextView>
+						<TextView android:id="@+id/userCompany"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" >
+                        </TextView>
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="right"
+                            android:layout_weight="0.1"
+                            android:src="@drawable/arrows_icon" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_no_corner_without_bottom"
+                        android:paddingLeft="12dip"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip"
+                        android:onClick="showUserPositionDialog">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_weight="0.9"
+                            android:text="@string/position"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+						<TextView android:id="@+id/userPosition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" >
+                        </TextView>
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="right"
+                            android:layout_weight="0.1"
+                            android:src="@drawable/arrows_icon" />
+                    </TableRow>
+ 
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_bottom_corner_no_top_line"
+                        android:paddingLeft="12dip"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip"
+                        android:onClick="showUserSchoolDialog">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:layout_gravity="left"
+                            android:text="@string/school"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" >
+                        </TextView>
+						<TextView android:id="@+id/userSchool"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" >
+                        </TextView>
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_weight="0.1"
+                            android:layout_gravity="right"
+                            android:src="@drawable/arrows_icon" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:orientation="vertical" >
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_top_corner_no_bottom_line"
+                        android:paddingLeft="12dip"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:layout_gravity="left"
+                            android:text="@string/mobile_phone"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" >
+                        </TextView>
+						<TextView android:id="@+id/userPhoneNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" >
+                        </TextView>
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_weight="0.1"
+                            android:layout_gravity="right"
+                            android:src="@drawable/arrows_icon" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_bottom_corner_no_top_line"
+                        android:paddingLeft="12dip"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip"
+                        android:onClick="showUserQQDialog">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="10dip"
+                            android:text="@string/qq"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" >
+                        </TextView>
+						<TextView android:id="@+id/userQQ"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" >
+                        </TextView>
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_weight="0.1"
+                            android:layout_gravity="right"
+                            android:src="@drawable/arrows_icon" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:orientation="vertical" >
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_top_corner_no_bottom_line"
+                        android:paddingLeft="12dip"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip"
+                        android:onClick="showUserEmailDialog">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:layout_gravity="left"
+                            android:text="@string/email"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" >
+                        </TextView>
+						<TextView android:id="@+id/userEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" >
+                        </TextView>
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_weight="0.1"
+                            android:layout_gravity="right"
+                            android:src="@drawable/arrows_icon" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_bottom_corner_no_top_line"
+                        android:paddingLeft="12dip"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="10dip"
+                            android:text="@string/weibo_sina"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" >
+                        </TextView>
+						<TextView android:id="@+id/userSinaWeibo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" >
+                        </TextView>
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_weight="0.1"
+                            android:layout_gravity="right"
+                            android:src="@drawable/arrows_icon" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:orientation="vertical" >
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_corner_line"
+                        android:paddingLeft="12dip"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip"
+                        android:onClick="showAgreement">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:layout_gravity="left"
+                            android:text="@string/choose_template"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" >
+                        </TextView>
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_weight="0.1"
+                            android:layout_gravity="right"
+                            android:src="@drawable/arrows_icon" />
+                    </TableRow>
+                </TableLayout>
+          </LinearLayout>      
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
