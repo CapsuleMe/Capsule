@@ -2,8 +2,11 @@ package com.capsule.android;
 
 import java.io.File;
 
+import com.capsule.android.CardSettingActivity.BandWeiboHandler;
+import com.capsule.android.weibo.WeiboManager;
 import com.capsule.common.SharePreferencesEditor;
 import com.capsule.common.Tools;
+import com.weibo.sdk.android.WeiboParameters;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -13,6 +16,8 @@ import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Message;
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -305,6 +310,26 @@ public class CardSettingActivity extends BaseActivity {
                 dialog.dismiss();
             }
         }).show();
+    }
+    
+    public void showWeiboBind(View target){
+        BandWeiboHandler handler=new BandWeiboHandler();
+        WeiboManager.getWeiboInstance().authorize(this, handler);
+        
+    }
+    
+    class BandWeiboHandler extends Handler{
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch(msg.what){
+                case WeiboManager.AUTH_SUCCESS:
+                    WeiboManager.getUserInfo(CardSettingActivity.this, this);
+                case WeiboManager.GET_USER_INFO:
+                    TextView weiboTxt=(TextView)findViewById(R.id.userSinaWeibo);
+                    weiboTxt.setText(msg.getData().getString("screen_name"));
+            }
+        }
     }
     
     @Override

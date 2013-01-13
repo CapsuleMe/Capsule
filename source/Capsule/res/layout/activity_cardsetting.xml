@@ -416,7 +416,8 @@
                         android:background="@drawable/shape_bottom_corner_no_top_line"
                         android:paddingLeft="12dip"
                         android:paddingTop="12dip"
-                        android:paddingBottom="12dip">
+                        android:paddingBottom="12dip"
+                        android:onClick="showWeiboBind">
 
                         <TextView
                             android:layout_width="wrap_content"
