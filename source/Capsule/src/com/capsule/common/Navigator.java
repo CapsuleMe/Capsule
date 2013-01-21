@@ -3,11 +3,16 @@ package com.capsule.common;
 import android.content.Context;
 import android.content.Intent;
 
+<<<<<<< HEAD
 import com.capsule.android.AgreementActivity;
 import com.capsule.android.FindWaysActivity;
+=======
+import com.capsule.android.BottomTabActivity;
+>>>>>>> master
 import com.capsule.android.FriendActivity;
 import com.capsule.android.LoginActivity;
 import com.capsule.android.MainActivity;
+import com.capsule.android.MessageActivity;
 import com.capsule.android.RegisterActivity;
 import com.capsule.android.SettingActivity;
 
@@ -18,10 +23,16 @@ public class Navigator {
 	public final static int LoginActivitySEQ = 1;
 	public final static int RegistActivitySEQ = 2;
 	public final static int ForgertPasswordSEQ = 3;
+	public final static int BottomTabActivitySEQ = 4;
 	public final static int FriendListActivitySEQ = 10;
+<<<<<<< HEAD
 	public final static int SettingActivitySEQ = 15;
 	public final static int AgreementActivitySEQ = 16;
 	public final static int FindHimActivitySEQ = 17;
+=======
+	public final static int MessageActivitySEQ = 11;
+
+>>>>>>> master
 	
 	private Context myContext = null;
 	
@@ -78,6 +89,7 @@ public class Navigator {
             case FriendListActivitySEQ:
                 switchTo(FriendActivity.class, src);
                 break;
+<<<<<<< HEAD
             case SettingActivitySEQ:
                 switchTo(SettingActivity.class, src);
                 break;
@@ -86,6 +98,13 @@ public class Navigator {
                 break;
             case FindHimActivitySEQ:
                 switchTo(FindWaysActivity.class, src);
+=======
+            case MessageActivitySEQ:
+				switchTo(MessageActivity.class, src);
+				break;
+            case BottomTabActivitySEQ:
+                switchTo(BottomTabActivity.class, src);
+>>>>>>> master
                 break;
             default:
                 break;
