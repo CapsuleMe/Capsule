@@ -2,12 +2,6 @@ package com.capsule.android;
 
 import java.io.File;
 
-import com.capsule.android.CardSettingActivity.BandWeiboHandler;
-import com.capsule.android.weibo.WeiboManager;
-import com.capsule.common.SharePreferencesEditor;
-import com.capsule.common.Tools;
-import com.weibo.sdk.android.WeiboParameters;
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -25,6 +19,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.capsule.android.weibo.WeiboManager;
+import com.capsule.common.SharePreferencesEditor;
+import com.capsule.common.Tools;
 
 public class CardSettingActivity extends BaseActivity {
 
@@ -128,7 +126,6 @@ public class CardSettingActivity extends BaseActivity {
     public void showChooseFaceDialog(View target) {
         new AlertDialog.Builder(this).setTitle(R.string.face_setting).setItems(picItems, new DialogInterface.OnClickListener() {
 
-            @Override
             public void onClick(DialogInterface dialog, int which) {
                 switch(which) {
                     case 0:
@@ -151,7 +148,6 @@ public class CardSettingActivity extends BaseActivity {
             }
         }).setNegativeButton(this.getString(R.string.cancel), new DialogInterface.OnClickListener() {
 
-            @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
             }
@@ -171,7 +167,6 @@ public class CardSettingActivity extends BaseActivity {
             }
         }).setNegativeButton(this.getString(R.string.cancel), new DialogInterface.OnClickListener() {
  
-            @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
             }
@@ -192,7 +187,6 @@ public class CardSettingActivity extends BaseActivity {
             }
         }).setNegativeButton(this.getString(R.string.cancel), new DialogInterface.OnClickListener() {
  
-            @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
             }
@@ -225,7 +219,6 @@ public class CardSettingActivity extends BaseActivity {
             }
         }).setNegativeButton(this.getString(R.string.cancel), new DialogInterface.OnClickListener() {
  
-            @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
             }
@@ -245,7 +238,6 @@ public class CardSettingActivity extends BaseActivity {
             }
         }).setNegativeButton(this.getString(R.string.cancel), new DialogInterface.OnClickListener() {
  
-            @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
             }
@@ -265,7 +257,6 @@ public class CardSettingActivity extends BaseActivity {
             }
         }).setNegativeButton(this.getString(R.string.cancel), new DialogInterface.OnClickListener() {
  
-            @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
             }
@@ -285,7 +276,6 @@ public class CardSettingActivity extends BaseActivity {
             }
         }).setNegativeButton(this.getString(R.string.cancel), new DialogInterface.OnClickListener() {
  
-            @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
             }
@@ -305,7 +295,6 @@ public class CardSettingActivity extends BaseActivity {
             }
         }).setNegativeButton(this.getString(R.string.cancel), new DialogInterface.OnClickListener() {
  
-            @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
             }

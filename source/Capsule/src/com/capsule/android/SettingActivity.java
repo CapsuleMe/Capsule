@@ -128,7 +128,6 @@ public class SettingActivity extends BaseActivity{
         cancelBtn=(Button)menuView.findViewById(R.id.cancelBtn);
         cancelBtn.setOnClickListener(new OnClickListener() {
             
-            @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 popup.dismiss();  
@@ -163,7 +162,6 @@ public class SettingActivity extends BaseActivity{
         popup.showAtLocation(this.findViewById(R.id.setting_layout), Gravity.BOTTOM, 0, 0);
         logoutBtn.setOnClickListener(new OnClickListener() {
             
-            @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 popup.dismiss();
@@ -178,7 +176,6 @@ public class SettingActivity extends BaseActivity{
         logoutBtn.setText(R.string.logout);
         logoutBtn.setOnClickListener(new OnClickListener() {
             
-            @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 //清空用户本地密码等操作

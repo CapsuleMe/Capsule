@@ -109,7 +109,7 @@ public class WeiboManager {
         public AuthDialogListener(Handler handler){
             this.handler=handler;
         }
-        @Override
+
         public void onComplete(Bundle values) {
             try {
                 String token=values.getString("access_token");
@@ -127,17 +127,14 @@ public class WeiboManager {
             }
         }
 
-        @Override
         public void onError(WeiboDialogError e) {
             Toast.makeText(WeiboManager.context, "Auth error : " + e.getMessage(), Toast.LENGTH_LONG).show();
         }
 
-        @Override
         public void onCancel() {
             Toast.makeText(WeiboManager.context, "Auth cancel", Toast.LENGTH_LONG).show();
         }
 
-        @Override
         public void onWeiboException(WeiboException e) {
             Toast.makeText(WeiboManager.context, "Auth exception : " + e.getMessage(), Toast.LENGTH_LONG).show();
         }

@@ -1,29 +1,18 @@
 <resources>
-
-<<<<<<< HEAD
-    <string name="app_name">Capsule</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="menu_settings">Settings</string>
-    <string name="title_activity_main">MainActivity</string>
-=======
     <string name="app_name">定位胶囊</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">定位胶囊</string>
->>>>>>> master
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_register">RegisterActivity</string>
     <string name="register">新用户注册</string>
     <string name="login">登录</string>
     <string name="password">密码</string>
     <string name="input_password">请输入密码</string>
-<<<<<<< HEAD
     <string name="exit">退出</string>
     <string name="submit">确定</string>
     <string name="cancel">取消</string>
     <string name="logout">注销登录</string>
-=======
->>>>>>> master
     <string name="number">号码</string>
     <string name="input_number">请输入手机号码</string>
     <string name="forget_password"><u>忘记密码？</u></string>
@@ -35,7 +24,6 @@
     <string name="friend_text">好友</string>
     <string name="all_friends_text">全部</string>
     <string name="search_friend_hint">搜索联系人</string>
-<<<<<<< HEAD
     <string name="current_position">定位当前位置</string>
     <string name="foreground">capsule_foreground</string>
     <string name="debug_tag">Capsule</string>
@@ -64,13 +52,10 @@
     <string name="email">邮箱</string>
     <string name="weibo_sina">新浪微博</string>
     <string name="choose_template">选择名片模板</string>
-=======
     <string name="title_activity_message">MessageActivity</string>
     <string name="current_position">定位当前位置</string>
     <string name="foreground">capsule_foreground</string>
     <string name="debug_tag">capsule</string>
     <string name="title_activity_search_friend">SearchFriendActivity</string>
     <string name="title_activity_search_friend_result">SearchFriendResultActivity</string>
-
->>>>>>> master
 </resources>
