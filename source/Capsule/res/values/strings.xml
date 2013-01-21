@@ -27,5 +27,6 @@
     <string name="debug_tag">capsule</string>
     <string name="title_activity_search_friend">SearchFriendActivity</string>
     <string name="title_activity_search_friend_result">SearchFriendResultActivity</string>
+    <string name="title_activity_namecard">MainActivity</string>
 
 </resources>

@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.capsule.android.widget.itemview.FriendItemView
 	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local ="http://schemas.android.com/apk/res/com.capsule.android"
 	style="?attr/gdThumbnailItemViewStyle"
 	android:layout_height="wrap_content"
 	android:minHeight="?attr/gdItemViewPreferredHeight"
 	android:paddingLeft="?attr/gdItemViewPreferredPaddingLeft"
 	android:paddingRight="?attr/gdItemViewPreferredPaddingLeft"
-	android:background="#FFFFFF">
+	android:background="#FFFFFF" xmlns:app="http://schemas.android.com/apk/res/com.capsule.android">
 	
-	<greendroid.widget.AsyncImageView
+	<com.capsule.android.widget.RoundedImageView
 		style="?attr/gdThumbnailItemViewStyleThumbnail"
 		android:id="@+id/friend_head"
 		android:layout_height="?attr/gdItemViewPreferredHeight"
-		android:scaleType="centerInside" />
+		android:src="@drawable/blue_background_normal"
+		android:scaleType="centerInside" 
+		local:corner_radius="10dp"
+		local:circle="true"/>
 
     <TextView
 		style="?attr/gdThumbnailItemViewStyleSubtitle"

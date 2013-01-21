@@ -45,7 +45,10 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".FriendActivity" />
-        <activity android:name=".BottomTabActivity" android:windowSoftInputMode="adjustPan"/>"
+        <activity
+            android:name=".BottomTabActivity"
+            android:windowSoftInputMode="adjustPan" />
+"
         <activity android:name=".MessageActivity" />
 
         <service android:name=".service.LocationService" >
@@ -63,6 +66,15 @@
         <activity
             android:name=".SearchContactActivity"
             android:label="@string/title_activity_search_friend_result" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NamecardActivity"
+            android:label="@string/title_activity_namecard" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
