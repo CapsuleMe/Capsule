@@ -22,11 +22,11 @@ public class Navigator {
 	public final static int ForgertPasswordSEQ = 3;
 	public final static int BottomTabActivitySEQ = 4;
 	public final static int FriendListActivitySEQ = 10;
+	public final static int MessageActivitySEQ = 11;
 	public final static int SettingActivitySEQ = 15;
 	public final static int AgreementActivitySEQ = 16;
 	public final static int FindHimActivitySEQ = 17;
-	public final static int MessageActivitySEQ = 11;
-
+	
 	
 	private Context myContext = null;
 	
@@ -91,6 +91,7 @@ public class Navigator {
                 break;
             case FindHimActivitySEQ:
                 switchTo(FindWaysActivity.class, src);
+                break;
             case MessageActivitySEQ:
 				switchTo(MessageActivity.class, src);
 				break;
