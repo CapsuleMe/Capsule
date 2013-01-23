@@ -38,27 +38,20 @@
         <activity android:name=".AgreementActivity" />
 		<activity android:name=".BottomTabActivity" android:windowSoftInputMode="adjustPan"/>
 		<activity android:name=".CapSuleMapActivity" />
-		<activity android:name=".FindWaysActivity" />
         <activity android:name=".CardSettingActivity"/>
+        <activity android:name=".FindWaysActivity" />
         <activity android:name=".FriendActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MessageActivity" />
+        <activity android:name=".NamecardActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".SearchContactActivity"/>
         <activity android:name=".SearchFriendActivity"/>
-        
+        <activity android:name=".SettingActivity"/>
         
         <service android:name=".service.LocationService" />
   
-        <activity
-            android:name=".NamecardActivity"
-            android:label="@string/title_activity_namecard" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        
     </application>
 
 </manifest>
