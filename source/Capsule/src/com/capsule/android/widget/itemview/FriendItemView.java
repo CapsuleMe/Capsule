@@ -9,11 +9,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.capsule.android.R;
+import com.capsule.android.widget.RoundedImageView;
 import com.capsule.android.widget.item.FriendItem;
 
 public class FriendItemView extends RelativeLayout implements ItemView {
 
-	private AsyncImageView mHeadView = null;
+	private RoundedImageView mHeadView = null;
 	private TextView mNameView = null;
 	private TextView mAddressView = null;
 	private TextView mTimeView = null;
@@ -38,12 +39,14 @@ public class FriendItemView extends RelativeLayout implements ItemView {
 
 	public void prepareItemView() {
 		// TODO Auto-generated method stub
-		//mHeadView = (AsyncImageView)findViewById(R.id.friend_head);
+		mHeadView = (RoundedImageView)findViewById(R.id.friend_head);
 		mNameView = (TextView)findViewById(R.id.friend_name);
 		mAddressView = (TextView)findViewById(R.id.friend_address);
 		mTimeView = (TextView)findViewById(R.id.friend_time);
 		mDistanceView = (TextView)findViewById(R.id.friend_distance);
 		
+		mHeadView.setUrl("http://www.baidu.com/img/shouye_b5486898c692066bd2cbaeda86d74448.gif");
+		mHeadView.setDefaultImageResource(R.drawable.blue_background_normal);
 	}
 
 	public void setObject(Item item) {

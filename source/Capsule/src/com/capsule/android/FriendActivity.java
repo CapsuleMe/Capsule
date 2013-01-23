@@ -16,13 +16,14 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import com.capsule.android.widget.item.FriendItem;
+import com.capsule.common.Navigator;
 import com.capsule.model.Friend;
 import com.capsule.model.Location;
 import com.capsule.model.User;
 
 
 
-public class FriendActivity extends ListActivity {
+public class FriendActivity extends BaseListActivity {
 
 	ItemAdapter adapter  = null;
 	LinearLayout searchBar = null;
@@ -51,35 +52,41 @@ public class FriendActivity extends ListActivity {
 			
 			}});
         
-        FillList();
+        FillList(false);
         
     }
 
-    private void FillList()
+    public void openSearchActivity(View target)
+    {
+    	myNavigator.switchTo(Navigator.FindHimActivitySEQ);
+    }
+    
+    public void showFamily(View target)
+    {
+    	FillList(false);
+    }
+    
+    public void showFriend(View target)
+    {
+    	FillList(true);
+    }
+    
+    private void FillList(boolean isFriend)
     {
     	   List<Item> items = new ArrayList<Item>();
-           
-           items.add(new FriendItem(getFriend()));   
-           items.add(new FriendItem(getFriend()));     
-           items.add(new FriendItem(getFriend()));     
-           items.add(new FriendItem(getFriend()));     
-           items.add(new FriendItem(getFriend()));     
-           items.add(new FriendItem(getFriend()));     
-           items.add(new FriendItem(getFriend()));     
-           items.add(new FriendItem(getFriend()));     
-           items.add(new FriendItem(getFriend()));     
-           items.add(new FriendItem(getFriend()));   
-           
+    	   for(int i=0;i<10;i++){
+    		   items.add(new FriendItem(getFriend(isFriend)));
+    	   }
            final ItemAdapter adapter = new ItemAdapter(this, items);
            setListAdapter(adapter);
     }
     
     
-    private Friend getFriend()
+    private Friend getFriend(boolean isFriend)
     {
     	User user = new User();
     	user.setId("1");
-    	user.setName("卡比兽");
+    	user.setName(isFriend?"宪超":"卡比兽");
     	user.setNumber("186111111");
     	user.setPassword("ttt");
     	
