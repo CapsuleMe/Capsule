@@ -36,7 +36,7 @@
 	    android:singleLine="true"
 	    android:text="name"
 	    android:textColor="#111111"
-	    android:textSize="18sp" />
+	    android:textSize="15sp" />
 
 	<TextView
 		style="?attr/gdThumbnailItemViewStyleSubtitle"

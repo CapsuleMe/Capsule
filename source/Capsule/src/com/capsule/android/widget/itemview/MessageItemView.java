@@ -42,7 +42,7 @@ public class MessageItemView extends RelativeLayout implements ItemView{
 		mContentView = (TextView)findViewById(R.id.message_content);
 		mTimeView = (TextView)findViewById(R.id.message_time);
 		
-		mHeadView.setDefaultImageResource(R.drawable.ic_launcher);
+		mHeadView.setDefaultImageResource(R.drawable.blue_background_normal);
 	}
 
 	public void setObject(Item item) {
