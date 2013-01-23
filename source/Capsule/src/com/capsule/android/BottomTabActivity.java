@@ -1,10 +1,7 @@
 package com.capsule.android;
 
-import android.app.AlarmManager;
-import android.app.AlertDialog;
 import android.app.TabActivity;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -24,7 +21,7 @@ public class BottomTabActivity extends TabActivity {
 	View lastView = null;// For animation;
 	TabHost tabHost = null;
 	MenuBarLayout menuBar = null;
-	int currentTabId,lastTabId;
+	int currentTabIndex,lastTabIndex;
 
 	public static BottomTabActivity getInstance(){
 		return instance;
@@ -38,7 +35,7 @@ public class BottomTabActivity extends TabActivity {
 	    initialTabs();
 	    initialMenuBar();
 
-	    currentTabId = 0;
+	    currentTabIndex = 1;
 
 	}
 
@@ -46,7 +43,7 @@ public class BottomTabActivity extends TabActivity {
 	public void onResume(){
 		super.onResume();
 		
-		setCurrentTab(currentTabId);
+		setCurrentTab(currentTabIndex);
 	}
 
 	/*
@@ -54,11 +51,15 @@ public class BottomTabActivity extends TabActivity {
 	 */	
 	private void initialTabs(){
 		  tabHost = getTabHost();  
-		  addTab(this,FriendActivity.class,"Friend","friend");      
+		  addTab(this,MessageActivity.class,"Message","message");
+		  addTab(this,FriendActivity.class,"Friend","friend");
+		  addTab(this,CapSuleMapActivity.class,"Map","map");
+		  addTab(this,NamecardActivity.class,"Namecard","namecard");
+		  addTab(this,SettingActivity.class,"Setting","setting");
 		  
 		  tabHost.setOnTabChangedListener(new OnTabChangeListener(){
 				public void onTabChanged(String tabId) {
-					if(currentTabId > lastTabId){
+					if(currentTabIndex > lastTabIndex){
 						MoveRightToLeft();
 					}else
 					{
@@ -83,10 +84,10 @@ public class BottomTabActivity extends TabActivity {
 			  return;
 		
 		   lastView = tabHost.getCurrentView();
-		   lastTabId = currentTabId;
+		   lastTabIndex = currentTabIndex;
 
 		   
-		   currentTabId = index;
+		   currentTabIndex = index;
 		   tabHost.setCurrentTab(index);
 		   menuBar.setButtonSelected(index, true);
 
