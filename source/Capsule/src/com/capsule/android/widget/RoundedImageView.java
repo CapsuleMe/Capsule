@@ -1,5 +1,7 @@
 package com.capsule.android.widget;
 
+import greendroid.widget.AsyncImageView;
+
 import com.capsule.android.R;
 
 import android.content.Context;
@@ -28,7 +30,7 @@ import android.widget.ImageView;
  * @author alex
  *
  */
-public class RoundedImageView extends ImageView {
+public class RoundedImageView extends AsyncImageView {
 
 	protected float mCornerRadius;
 	protected boolean mCircle;
