@@ -43,19 +43,4 @@ public class UserInfoActivity extends Activity {
         }
         
     }
-    
-    private class UpdateTouchListener implements OnTouchListener{
-
-        @Override
-        public boolean onTouch(View v, MotionEvent event) {
-            // TODO Auto-generated method stub  
-            if(event.getAction()==MotionEvent.ACTION_DOWN){  
-                v.setBackgroundResource(R.drawable.login_btn);  
-            }else if(event.getAction()==MotionEvent.ACTION_UP){  
-                v.setBackgroundResource(R.drawable.login_btn_press);  
-            }  
-            return false;
-        }
-        
-    }
 }
