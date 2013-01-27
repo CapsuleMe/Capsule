@@ -1,0 +1,262 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background" >
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/userinfo_shadow"
+        android:padding="8dip" >
+
+        <LinearLayout
+            android:id="@+id/head_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_corner"
+            android:padding="2dip" >
+
+            <ImageView
+                android:layout_width="70dip"
+                android:layout_height="70dip"
+                android:src="@drawable/default_face" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="90dip"
+            android:text="孙宪超"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/gps_icon"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_below="@id/name"
+            android:layout_marginLeft="90dip"
+            android:layout_marginTop="30dip"
+            android:src="@drawable/gps_icon" />
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginTop="30dip"
+            android:layout_toRightOf="@id/gps_icon"
+            android:text="3.5km"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/reflush_icon"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/name"
+            android:layout_marginRight="78dip"
+            android:layout_marginTop="30dip"
+            android:src="@drawable/reflush_icon" />
+
+        <TextView
+            android:id="@+id/gps_updatetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/name"
+            android:layout_marginTop="30dip"
+            android:text="01-12 12:12"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:paddingTop="5dip"
+        android:layout_below="@id/topLayout">
+
+        <TableLayout
+            android:id="@+id/userinfo_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dip" >
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_top_corner_no_bottom_line"
+                android:paddingBottom="12dip"
+                android:paddingLeft="12dip"
+                android:paddingTop="12dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="@string/relation"
+                    android:textColor="@color/textColor"
+                    android:textSize="15sp" >
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.8"
+                    android:text="亲密"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" >
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/update"
+                    android:textColor="@color/textBlue"
+                    android:textSize="15sp" >
+                </TextView>
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/arrows_icon" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_no_corner_without_bottom"
+                android:paddingBottom="12dip"
+                android:paddingLeft="12dip"
+                android:paddingTop="12dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="@string/business_card"
+                    android:textColor="@color/textColor"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_weight="0.8"
+                    android:text="我的名片"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" >
+                </TextView>
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/arrows_icon" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_bottom_corner_no_top_line"
+                android:paddingBottom="12dip"
+                android:paddingLeft="12dip"
+                android:paddingTop="12dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="@string/location"
+                    android:textColor="@color/textColor"
+                    android:textSize="15sp" >
+                </TextView>
+				
+                  	<TextView
+	                    android:id="@+id/userSchool"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:gravity="left"
+	                    android:text="我当前的地理位置"
+                    	android:layout_weight="0.7"
+	                    android:textColor="@color/black"
+	                    android:textSize="15sp" >
+                	</TextView>
+                
+	                <ImageView
+	                    android:id="@+id/loading_image"
+	                    android:visibility="gone"
+	                    android:layout_width="95dip"
+	                    android:layout_height="25dip"
+	                    android:src="@drawable/loading" />
+                
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/arrows_icon" />
+            </TableRow>
+        </TableLayout>
+       <Button android:id="@+id/updateGPSBtn"
+            android:text="@string/update_location"
+            android:layout_width="wrap_content"
+        	android:layout_margin="8dip"
+        	android:layout_height="40dip"
+        	android:textSize="15sp"
+        	android:background="@drawable/login_btn_selector"
+        	android:layout_below="@+id/userinfo_layout"
+        	android:contentDescription="@string/update_location"/>
+    </RelativeLayout>
+
+ 	<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dip"
+        android:paddingLeft="30dip"
+        android:paddingRight="30dip"
+        android:paddingBottom="8dip"
+        android:layout_alignParentBottom="true">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:shrinkColumns="*" >
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/mobilephone_button_selector"/>
+                
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/hello_button_selector"/>
+                
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/message_button_selector"/>
+
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+</RelativeLayout>
