@@ -23,7 +23,7 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.GreenDroid" >
         <activity
-            android:name=".CardSettingActivity"
+            android:name=".UserInfoActivity"
             android:theme="@android:style/Theme.NoTitleBar"
             android:label="@string/title_activity_main" >
             <intent-filter>
