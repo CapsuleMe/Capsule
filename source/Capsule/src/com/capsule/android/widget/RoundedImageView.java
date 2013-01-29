@@ -1,9 +1,6 @@
 package com.capsule.android.widget;
 
 import greendroid.widget.AsyncImageView;
-
-import com.capsule.android.R;
-
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -16,7 +13,8 @@ import android.graphics.Xfermode;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.widget.ImageView;
+
+import com.capsule.android.R;
 
 /**
  * An ImageView that allows a pixel corner radius
