@@ -1,18 +1,21 @@
 package com.capsule.model;
 
-public class Friend {
+public class Friend extends User{
 
-	private User user;
+	public static final int VIP = 0;
+	public static final int FRIEND = 1;
+	
+	private int ftype;
 	private Location location;
 	private int type;
-	
-	
-	public User getUser() {
-		return user;
+
+	public int getFtype() {
+		return ftype;
 	}
-	public void setUser(User user) {
-		this.user = user;
+	public void setFtype(int ftype) {
+		this.ftype = ftype;
 	}
+	
 	public Location getLocation() {
 		return location;
 	}
@@ -25,6 +28,7 @@ public class Friend {
 	public void setType(int type) {
 		this.type = type;
 	}
+	
 	
 	
 }
