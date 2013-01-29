@@ -45,12 +45,12 @@ public class FriendActivity extends BaseListActivity {
         	
         });
         searchBar.setOnFocusChangeListener(new OnFocusChangeListener(){
-
 			public void onFocusChange(View v, boolean hasFocus) {
 				// TODO Auto-generated method stub
 				searchText.requestFocus();
 			
 			}});
+       
         
         FillList(false);
         

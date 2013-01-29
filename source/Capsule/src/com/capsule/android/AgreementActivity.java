@@ -9,7 +9,8 @@ import com.capsule.android.widget.OnViewChangeListener;
 import com.capsule.android.widget.ScrollLayout;
 
 public class AgreementActivity extends BaseActivity implements OnViewChangeListener{
-
+ 
+	
     private LinearLayout focueLayout;
 
     private ScrollLayout scrollLayout;
