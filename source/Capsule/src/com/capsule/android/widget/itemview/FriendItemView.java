@@ -1,6 +1,5 @@
 package com.capsule.android.widget.itemview;
 
-import greendroid.widget.AsyncImageView;
 import greendroid.widget.item.Item;
 import greendroid.widget.itemview.ItemView;
 import android.content.Context;
@@ -52,7 +51,7 @@ public class FriendItemView extends RelativeLayout implements ItemView {
 	public void setObject(Item item) {
 		// TODO Auto-generated method stub
 		final FriendItem fitem = (FriendItem)item;
-		mNameView.setText(fitem.friend.getUser().getName());
+		mNameView.setText(fitem.friend.getName());
 		mAddressView.setText(fitem.friend.getLocation().getAddress());
 		mTimeView.setText("10分钟前");
 		mDistanceView.setText("10.2m");
