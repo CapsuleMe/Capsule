@@ -4,10 +4,10 @@ import greendroid.widget.ItemAdapter;
 import greendroid.widget.item.Item;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 
-import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -18,8 +18,6 @@ import android.widget.LinearLayout;
 import com.capsule.android.widget.item.FriendItem;
 import com.capsule.common.Navigator;
 import com.capsule.model.Friend;
-import com.capsule.model.Location;
-import com.capsule.model.User;
 
 
 
@@ -73,34 +71,16 @@ public class FriendActivity extends BaseListActivity {
     
     private void FillList(boolean isFriend)
     {
+    	   MyApplication app = (MyApplication)getApplicationContext();
+    	   Collection<Friend> coll = app.fManager.getAll(isFriend?Friend.FRIEND:Friend.VIP);
+    	   Iterator<Friend> it = coll.iterator();
+    	   
     	   List<Item> items = new ArrayList<Item>();
-    	   for(int i=0;i<10;i++){
-    		   items.add(new FriendItem(getFriend(isFriend)));
+    	   while(it.hasNext()){
+    		   items.add(new FriendItem(it.next()));
     	   }
            final ItemAdapter adapter = new ItemAdapter(this, items);
            setListAdapter(adapter);
-    }
-    
-    
-    private Friend getFriend(boolean isFriend)
-    {
-    	User user = new User();
-    	user.setId("1");
-    	user.setName(isFriend?"宪超":"卡比兽");
-    	user.setNumber("186111111");
-    	user.setPassword("ttt");
-    	
-    	Location location = new Location();
-    	location.setAddress("北京市海淀区中关村东路1号赛尔大厦22层");
-    	location.setLatitude(123);
-    	location.setLongitude(123);
-    	location.setDateTime(new Date());
-    	
-    	Friend f = new Friend();
-    	f.setUser(user);
-    	f.setLocation(location);
-    	
-    	return f;
     }
     
    /* @Override
