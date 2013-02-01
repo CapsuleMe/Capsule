@@ -1,6 +1,5 @@
 package com.capsule.android.widget.itemview;
 
-import greendroid.widget.AsyncImageView;
 import greendroid.widget.item.Item;
 import greendroid.widget.itemview.ItemView;
 import android.content.Context;
@@ -9,11 +8,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.capsule.android.R;
+import com.capsule.android.widget.RoundedImageView;
 import com.capsule.android.widget.item.MessageItem;
 
 public class MessageItemView extends RelativeLayout implements ItemView{
 
-	private AsyncImageView mHeadView = null;
+	private RoundedImageView mHeadView = null;
 	private TextView mNameView = null;
 	private TextView mContentView = null;
 	private TextView mTimeView = null;
@@ -37,11 +37,12 @@ public class MessageItemView extends RelativeLayout implements ItemView{
 
 	public void prepareItemView() {
 		// TODO Auto-generated method stub
-		mHeadView = (AsyncImageView)findViewById(R.id.message_head);
+		mHeadView = (RoundedImageView)findViewById(R.id.message_head);
 		mNameView = (TextView)findViewById(R.id.message_name);
 		mContentView = (TextView)findViewById(R.id.message_content);
 		mTimeView = (TextView)findViewById(R.id.message_time);
 		
+		mHeadView.setUrl("http://www.baidu.com/img/shouye_b5486898c692066bd2cbaeda86d74448.gif");
 		mHeadView.setDefaultImageResource(R.drawable.blue_background_normal);
 	}
 
