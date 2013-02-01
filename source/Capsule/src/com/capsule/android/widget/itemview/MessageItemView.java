@@ -42,8 +42,8 @@ public class MessageItemView extends RelativeLayout implements ItemView{
 		mContentView = (TextView)findViewById(R.id.message_content);
 		mTimeView = (TextView)findViewById(R.id.message_time);
 		
-		mHeadView.setUrl("http://www.baidu.com/img/shouye_b5486898c692066bd2cbaeda86d74448.gif");
-		mHeadView.setDefaultImageResource(R.drawable.blue_background_normal);
+		mHeadView.setUrl(FriendItemView.TestImgUrl);
+		mHeadView.setDefaultImageResource(R.drawable.default_face);
 	}
 
 	public void setObject(Item item) {

@@ -13,6 +13,9 @@ import com.capsule.android.widget.item.FriendItem;
 
 public class FriendItemView extends RelativeLayout implements ItemView {
 
+	public static final String TestImgUrl = 
+			"http://nunu.in/media/2010/04/Elisha-Cuthbert-girl-next-door-latest-pictures-wallpapers-photos-gallery-full-elisha-cuthbert-face.jpg";
+	
 	private RoundedImageView mHeadView = null;
 	private TextView mNameView = null;
 	private TextView mAddressView = null;
@@ -44,8 +47,8 @@ public class FriendItemView extends RelativeLayout implements ItemView {
 		mTimeView = (TextView)findViewById(R.id.friend_time);
 		mDistanceView = (TextView)findViewById(R.id.friend_distance);
 		
-		mHeadView.setUrl("http://www.baidu.com/img/shouye_b5486898c692066bd2cbaeda86d74448.gif");
-		mHeadView.setDefaultImageResource(R.drawable.blue_background_normal);
+		mHeadView.setUrl(TestImgUrl);
+		mHeadView.setDefaultImageResource(R.drawable.default_face);
 	}
 
 	public void setObject(Item item) {
