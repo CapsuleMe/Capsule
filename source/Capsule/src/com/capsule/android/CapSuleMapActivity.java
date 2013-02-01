@@ -24,7 +24,6 @@ public class CapSuleMapActivity extends BaiduMapOverlayActivity{
         View layout=findViewById(R.id.mapTabLayout);
         layout.getBackground().setAlpha(220);
         initMapBarView();
-        startLocationService();
     }
 
     @Override
@@ -77,12 +76,6 @@ public class CapSuleMapActivity extends BaiduMapOverlayActivity{
         showCurrentLocation();
     }
     
-    /**Start Location Service*/
-    private void startLocationService(){
-            Intent intent = new Intent(this, LocationService.class);
-            this.startService(intent);  
-    }
-
     @Override
     public void update(Observable observable, Object data) {
         

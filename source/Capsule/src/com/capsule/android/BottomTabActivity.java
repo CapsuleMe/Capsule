@@ -9,6 +9,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.TabHost;
 import android.widget.TabHost.OnTabChangeListener;
 
+import com.capsule.android.service.LocationService;
 import com.capsule.android.widget.MenuBarLayout;
 import com.capsule.android.widget.OnMenuBarSelectListener;
 
@@ -32,11 +33,13 @@ public class BottomTabActivity extends TabActivity {
 	    setContentView(R.layout.activity_bottomtab);
 
 	    instance = this;
+	    
+	    startLocationService();
+	    
 	    initialTabs();
 	    initialMenuBar();
 
 	    currentTabIndex = 1;
-
 	}
 
 	@Override
@@ -46,6 +49,26 @@ public class BottomTabActivity extends TabActivity {
 		setCurrentTab(currentTabIndex);
 	}
 
+	public void setCurrentTab(int index){
+		  int tabCount = tabHost.getTabWidget().getTabCount();
+		  if(index<0 || index >= tabCount)
+			  return;
+		
+		   lastView = tabHost.getCurrentView();
+		   lastTabIndex = currentTabIndex;
+
+		   
+		   currentTabIndex = index;
+		   tabHost.setCurrentTab(index);
+		   menuBar.setButtonSelected(index, true);
+
+		   //Is first view
+		   if(lastView == null){
+			   lastView = tabHost.getCurrentView(); 
+		   }
+	}
+	
+	
 	/*
 	 *  Tab
 	 */	
@@ -78,25 +101,6 @@ public class BottomTabActivity extends TabActivity {
 				}}); 
 	}
 
-	public void setCurrentTab(int index){
-		  int tabCount = tabHost.getTabWidget().getTabCount();
-		  if(index<0 || index >= tabCount)
-			  return;
-		
-		   lastView = tabHost.getCurrentView();
-		   lastTabIndex = currentTabIndex;
-
-		   
-		   currentTabIndex = index;
-		   tabHost.setCurrentTab(index);
-		   menuBar.setButtonSelected(index, true);
-
-		   //Is first view
-		   if(lastView == null){
-			   lastView = tabHost.getCurrentView(); 
-		   }
-	}
-
 	private void addTab(Context ctx, Class<?> cls,String indicator, String tag) {
 		Intent intent = new Intent().setClass(ctx, cls);
 		TabHost.TabSpec spec = tabHost.newTabSpec(tag).setIndicator(indicator).setContent(intent);
@@ -117,5 +121,12 @@ public class BottomTabActivity extends TabActivity {
 		 lastView.setAnimation(AnimationUtils.loadAnimation(this, R.anim.out_right_left));
 	     currentView.setAnimation(AnimationUtils.loadAnimation(this, R.anim.in_right_left));
 	}
+	
+	 /**Start Location Service*/
+    private void startLocationService(){
+            Intent intent = new Intent(this, LocationService.class);
+            this.startService(intent);  
+    }
+
 
 }
