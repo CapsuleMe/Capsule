@@ -8,12 +8,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.capsule.android.R;
+import com.capsule.android.cache.ImgCache;
 import com.capsule.android.widget.RoundedImageView;
 import com.capsule.android.widget.item.FriendItem;
 
 public class FriendItemView extends RelativeLayout implements ItemView {
 
-	public static final String TestImgUrl = 
+	public static final String TestImgUrl =
 			"http://nunu.in/media/2010/04/Elisha-Cuthbert-girl-next-door-latest-pictures-wallpapers-photos-gallery-full-elisha-cuthbert-face.jpg";
 	
 	private RoundedImageView mHeadView = null;
@@ -48,7 +49,7 @@ public class FriendItemView extends RelativeLayout implements ItemView {
 		mDistanceView = (TextView)findViewById(R.id.friend_distance);
 		
 		mHeadView.setUrl(TestImgUrl);
-		mHeadView.setDefaultImageResource(R.drawable.default_face);
+		mHeadView.setDefaultImageDrawable(ImgCache.getInstance().getDefaultFace());
 	}
 
 	public void setObject(Item item) {
@@ -61,5 +62,4 @@ public class FriendItemView extends RelativeLayout implements ItemView {
 		
 		
 	}
-
 }

@@ -57,15 +57,6 @@ public class MessageActivity extends ListActivity {
     	   List<Item> items = new ArrayList<Item>();
            
            items.add(new MessageItem(getMessage()));   
-           items.add(new MessageItem(getMessage()));     
-           items.add(new MessageItem(getMessage()));     
-           items.add(new MessageItem(getMessage()));     
-           items.add(new MessageItem(getMessage()));     
-           items.add(new MessageItem(getMessage()));     
-           items.add(new MessageItem(getMessage()));     
-           items.add(new MessageItem(getMessage()));     
-           items.add(new MessageItem(getMessage()));     
-           items.add(new MessageItem(getMessage()));   
            
            final ItemAdapter adapter = new ItemAdapter(this, items);
            setListAdapter(adapter);

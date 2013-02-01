@@ -57,6 +57,11 @@ public class ImageCache implements OnLowMemoryListener {
     }
 
     public void put(String url, Bitmap bitmap) {
+    	if(mSoftCache.containsKey(url))
+    	{
+    		release(url);
+    	}
+    	
         mSoftCache.put(url, new SoftReference<Bitmap>(bitmap));
     }
 
@@ -66,5 +71,20 @@ public class ImageCache implements OnLowMemoryListener {
 
     public void onLowMemoryReceived() {
         flush();
+    }
+    
+    /*Add by chao zhou*/
+    public void release(String url){
+    	SoftReference<Bitmap> ref = mSoftCache.get(url);
+		if (ref == null){
+			return;
+		}
+		
+		Bitmap bitmap = ref.get();
+	    if (bitmap != null) {
+	    	bitmap.recycle();
+	    }
+
+	    mSoftCache.remove(url);
     }
 }
