@@ -1,10 +1,10 @@
 package com.capsule.android;
 
 import android.os.Bundle;
-import android.app.Activity;
 import android.view.Menu;
+import android.view.View;
 
-public class NamecardActivity extends Activity {
+public class NamecardActivity extends BaseActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -12,6 +12,11 @@ public class NamecardActivity extends Activity {
         setContentView(R.layout.activity_namecard);
     }
 
+    public void openCardSettingActivity(View target)
+    {
+    	myNavigator.switchTo(CardSettingActivity.class);
+    }
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_namecard, menu);
