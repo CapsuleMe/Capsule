@@ -83,8 +83,16 @@ public class LocationService extends NotificationService {
 	
 	private void bindListener(){
 		//Read preferences and to decide which locating listener to bind
-		bindNetLocationListener();
-		bindGPSLocationListener();
+		if(locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
+			bindGPSLocationListener();
+			Log.v(getString(R.string.debug_tag), "GPS_PROVIDER Start");
+		}
+		
+		if(locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)){
+			bindNetLocationListener();
+			Log.v(getString(R.string.debug_tag), "NETWORK_PROVIDER Start");
+		}
+
 	}
 	
 }

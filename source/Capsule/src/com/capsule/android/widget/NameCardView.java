@@ -126,6 +126,7 @@ public class NameCardView extends ImageView {
 		temptCanvas.drawPath(path,erasePaint);
 		
 		canvas.drawBitmap(tempBitmap,0,0,null);
+		tempBitmap.recycle();
 	}
 	
 	private RectF getBgCircle(){
@@ -170,6 +171,7 @@ public class NameCardView extends ImageView {
 		
 		
 		canvas.drawBitmap(tempBitmap,0,0,null);
+		tempBitmap.recycle();
 	}
 	
 	private RectF getRectFC(RectF rectF)
