@@ -8,6 +8,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.capsule.android.R;
+import com.capsule.android.cache.ImgCache;
 import com.capsule.android.widget.RoundedImageView;
 import com.capsule.android.widget.item.MessageItem;
 
@@ -43,7 +44,7 @@ public class MessageItemView extends RelativeLayout implements ItemView{
 		mTimeView = (TextView)findViewById(R.id.message_time);
 		
 		mHeadView.setUrl(FriendItemView.TestImgUrl);
-		mHeadView.setDefaultImageResource(R.drawable.default_face);
+		mHeadView.setDefaultImageDrawable(ImgCache.getInstance().getDefaultFace());
 	}
 
 	public void setObject(Item item) {

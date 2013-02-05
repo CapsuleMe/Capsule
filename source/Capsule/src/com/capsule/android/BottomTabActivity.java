@@ -1,28 +1,31 @@
 package com.capsule.android;
 
-import android.app.TabActivity;
-import android.content.Context;
+import java.util.ArrayList;
+
+import android.app.ActivityGroup;
+import android.app.LocalActivityManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.AnimationUtils;
-import android.widget.TabHost;
-import android.widget.TabHost.OnTabChangeListener;
+import android.view.ViewGroup;
 
+import com.capsule.android.service.LocationService;
 import com.capsule.android.widget.MenuBarLayout;
 import com.capsule.android.widget.OnMenuBarSelectListener;
 
 
 @SuppressWarnings("deprecation")
-public class BottomTabActivity extends TabActivity {
-
+public class BottomTabActivity extends ActivityGroup {
+	  
+	
 	static BottomTabActivity instance = null;
 
-	View lastView = null;// For animation;
-	TabHost tabHost = null;
+	LocalActivityManager manager;
 	MenuBarLayout menuBar = null;
-	int currentTabIndex,lastTabIndex;
-
+	int currentTabIndex;
+	ViewGroup container = null;
+	ArrayList<Intent> viewList = null;
+	
 	public static BottomTabActivity getInstance(){
 		return instance;
 	}
@@ -32,41 +35,58 @@ public class BottomTabActivity extends TabActivity {
 	    setContentView(R.layout.activity_bottomtab);
 
 	    instance = this;
-	    initialTabs();
+	    viewList = new ArrayList<Intent>();
+	    manager=getLocalActivityManager();  
+	    container = (ViewGroup)this.findViewById(R.id.container);
+	    
+	    startLocationService();
+	    
+	    
+	    initialViews();
 	    initialMenuBar();
 
 	    currentTabIndex = 1;
-
 	}
 
 	@Override
 	public void onResume(){
 		super.onResume();
 		
-		setCurrentTab(currentTabIndex);
+		setCurrentView(currentTabIndex);
 	}
 
+	public void setCurrentView(int index){
+		  if(index<0 || index >= viewList.size())
+			  return;
+	   
+		   currentTabIndex = index;
+		   container.removeAllViews();
+		   container.addView(getCurrentView(index));
+		   
+		   menuBar.setButtonSelected(index, true);
+	}
+	
+	private View getCurrentView(int index)
+	{
+		return manager.startActivity(
+				index+"",
+				viewList
+				.get(index)
+				.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+				.getDecorView();
+	}
+	
+	
 	/*
 	 *  Tab
 	 */	
-	private void initialTabs(){
-		  tabHost = getTabHost();  
-		  addTab(this,MessageActivity.class,"Message","message");
-		  addTab(this,FriendActivity.class,"Friend","friend");
-		  addTab(this,CapSuleMapActivity.class,"Map","map");
-		  addTab(this,NamecardActivity.class,"Namecard","namecard");
-		  addTab(this,SettingActivity.class,"Setting","setting");
+	private void initialViews(){	
+		viewList.add(new Intent(this, MessageActivity.class));
+		viewList.add(new Intent(this, FriendActivity.class));
+		viewList.add(new Intent(this, CapSuleMapActivity.class));
+		viewList.add(new Intent(this, NamecardActivity.class));
+		viewList.add(new Intent(this, SettingActivity.class));
 		  
-		  tabHost.setOnTabChangedListener(new OnTabChangeListener(){
-				public void onTabChanged(String tabId) {
-					if(currentTabIndex > lastTabIndex){
-						MoveRightToLeft();
-					}else
-					{
-						MoveLeftToRigt();
-					}
-				}	
-		    });
 	} 
 
 	private void initialMenuBar(){
@@ -74,48 +94,15 @@ public class BottomTabActivity extends TabActivity {
 		  menuBar.setOnMenuBarSelectListener(new OnMenuBarSelectListener(){
 
 				public void onSelected(int index, View v) {
-					setCurrentTab(index);
+					setCurrentView(index);
 				}}); 
 	}
 
-	public void setCurrentTab(int index){
-		  int tabCount = tabHost.getTabWidget().getTabCount();
-		  if(index<0 || index >= tabCount)
-			  return;
-		
-		   lastView = tabHost.getCurrentView();
-		   lastTabIndex = currentTabIndex;
+	 /**Start Location Service*/
+    private void startLocationService(){
+            Intent intent = new Intent(this, LocationService.class);
+            this.startService(intent);  
+    }
 
-		   
-		   currentTabIndex = index;
-		   tabHost.setCurrentTab(index);
-		   menuBar.setButtonSelected(index, true);
-
-		   //Is first view
-		   if(lastView == null){
-			   lastView = tabHost.getCurrentView(); 
-		   }
-	}
-
-	private void addTab(Context ctx, Class<?> cls,String indicator, String tag) {
-		Intent intent = new Intent().setClass(ctx, cls);
-		TabHost.TabSpec spec = tabHost.newTabSpec(tag).setIndicator(indicator).setContent(intent);
-	    tabHost.addTab(spec);
-	}
-	
-	/*
-	 * Animation 
-	 */	
-	private void MoveLeftToRigt(){
-		View currentView = tabHost.getCurrentView();
-		 lastView.setAnimation(AnimationUtils.loadAnimation(this, R.anim.out_left_right));
-	     currentView.setAnimation(AnimationUtils.loadAnimation(this, R.anim.in_left_right));
-	}
-
-	private void MoveRightToLeft(){
-		View currentView = tabHost.getCurrentView();
-		 lastView.setAnimation(AnimationUtils.loadAnimation(this, R.anim.out_right_left));
-	     currentView.setAnimation(AnimationUtils.loadAnimation(this, R.anim.in_right_left));
-	}
 
 }

@@ -355,7 +355,7 @@
                 android:orientation="vertical" >
 				<Button android:id="@+id/exitBtn"
 		            android:text="@string/exit"
-		            android:layout_width="wrap_content"
+		            android:layout_width="match_parent"
 		        	android:layout_height="40dip"
 		        	android:layout_marginBottom="10dip"
                     android:textColor="@color/black"
@@ -366,7 +366,7 @@
 		        
 		        <Button android:id="@+id/logoutBtn"
 		            android:text="@string/logout"
-		            android:layout_width="wrap_content"
+		            android:layout_width="match_parent"
 		        	android:layout_height="40dip"
 		        	android:textSize="15sp"
 		        	android:textColor="@color/black"
