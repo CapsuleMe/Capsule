@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.capsule.android.widget.MenuBarLayout  
+    	xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+    	android:layout_height="55dp"
+    	android:orientation="horizontal"
+    	android:background="@null"
+    	android:gravity="center" 
+    	android:layout_gravity="center"
+    	android:padding="0dp"
+    	android:layout_margin="0dp">
+    <TableRow >
+	  <ImageButton android:src="@drawable/icon_bottom_1" 
+	      android:background="@drawable/icon_bottom_bg_2"
+	      android:layout_width="0dip"
+	      android:layout_weight="1.0" 
+	      android:layout_height="wrap_content"
+	      android:layout_marginTop="5dp"
+	      android:padding="3dp"
+	      android:scaleType="centerInside"/>
+	  <ImageButton android:src="@drawable/icon_bottom_2" 
+	      android:background="@drawable/icon_bottom_bg_2"
+	      android:layout_width="0dip"
+	      android:layout_height="wrap_content"
+	      android:layout_weight="1.0" 
+	      android:layout_marginTop="5dp"
+	      android:padding="3dp"
+	      android:scaleType="centerInside"/>
+	  <ImageButton android:src="@drawable/icon_bottom_3" 
+	      android:background="@drawable/icon_bottom_bg_1"
+	      android:layout_width="0dip" 
+	      android:layout_weight="1.0" 
+	      android:layout_height="wrap_content"
+	      android:padding="3dp"
+	      android:scaleType="centerInside"/>
+	  <ImageButton android:src="@drawable/icon_bottom_4" 
+	      android:background="@drawable/icon_bottom_bg_2"
+	      android:layout_width="0dip"
+	      android:layout_weight="1.0"
+	      android:layout_height="wrap_content" 
+	      android:layout_marginTop="5dp"
+	      android:padding="3dp"
+	      android:scaleType="centerInside"/>
+	  <ImageButton android:src="@drawable/icon_bottom_5"
+	      android:background="@drawable/icon_bottom_bg_2" 
+	      android:layout_width="0dip"
+	      android:layout_weight="1.0" 
+	      android:layout_height="wrap_content"
+	      android:layout_marginTop="5dp"
+	      android:padding="3dp"
+	      android:scaleType="centerInside"/>"
+	</TableRow>
+</com.capsule.android.widget.MenuBarLayout >

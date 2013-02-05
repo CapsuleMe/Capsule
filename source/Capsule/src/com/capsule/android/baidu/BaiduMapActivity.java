@@ -1,9 +1,5 @@
 package com.capsule.android.baidu;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import android.location.Location;
 import android.os.Bundle;
 
 import com.baidu.mapapi.BMapManager;

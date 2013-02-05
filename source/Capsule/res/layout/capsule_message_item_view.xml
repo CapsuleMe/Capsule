@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.capsule.android.widget.itemview.MessageItemView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local ="http://schemas.android.com/apk/res/com.capsule.android"
+	style="?attr/gdThumbnailItemViewStyle"
+	android:layout_height="wrap_content"
+	android:minHeight="?attr/gdItemViewPreferredHeight"
+	android:paddingLeft="?attr/gdItemViewPreferredPaddingLeft"
+	android:paddingRight="?attr/gdItemViewPreferredPaddingLeft"
+	android:background="#FFFFFF">
+	
+	<com.capsule.android.widget.RoundedImageView
+		android:id="@+id/message_head"
+		android:layout_height="45dp"
+		android:layout_width="45dp"
+		android:src="@drawable/blue_background_normal"
+		android:scaleType="fitXY"
+		android:layout_centerVertical="true"
+		android:layout_marginTop="3dp"
+		android:layout_marginBottom="3dp"
+		android:layout_marginRight="10dp"
+		android:layout_marginLeft="8dp"
+		local:corner_radius="5dp" />
+
+    <TextView
+		style="?attr/gdThumbnailItemViewStyleSubtitle"
+		android:id="@+id/message_time"
+		android:layout_alignParentRight="true"
+		android:layout_width="wrap_content"
+		android:gravity="bottom"
+		android:singleLine="true"
+		android:ellipsize="end" 
+		android:text="time"
+		android:textColor="#989898"/>
+    
+	<TextView
+	    android:id="@+id/message_name"
+	    style="?attr/gdThumbnailItemViewStyleText"
+	    android:layout_width="fill_parent"
+	    android:layout_toLeftOf="@id/message_time"
+	    android:layout_toRightOf="@id/message_head"
+	    android:ellipsize="end"
+	    android:gravity="bottom"
+	    android:singleLine="true"
+	    android:text="name"
+	    android:textColor="#111111"
+	    android:textSize="15sp" />
+
+	<TextView
+		style="?attr/gdThumbnailItemViewStyleSubtitle"
+		android:id="@+id/message_content"
+		android:layout_width="fill_parent"
+		android:layout_toRightOf="@id/message_head"
+		android:layout_below="@+id/message_name"
+		android:layout_alignLeft="@id/message_name"
+		android:layout_alignParentBottom="true"
+		android:gravity="center_vertical"
+		android:singleLine="true"
+		android:ellipsize="end" 
+		android:text="address"
+		android:textColor="#989898"/>
+
+</com.capsule.android.widget.itemview.MessageItemView>

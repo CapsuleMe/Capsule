@@ -1,8 +1,5 @@
 package com.capsule.android.weibo;
 
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -10,8 +7,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
-import android.view.View;
 import android.widget.Toast;
 
 import com.weibo.sdk.android.Oauth2AccessToken;
@@ -19,7 +14,6 @@ import com.weibo.sdk.android.Weibo;
 import com.weibo.sdk.android.WeiboAuthListener;
 import com.weibo.sdk.android.WeiboDialogError;
 import com.weibo.sdk.android.WeiboException;
-import com.weibo.sdk.android.WeiboParameters;
 import com.weibo.sdk.android.net.RequestListener;
 
 public class WeiboManager {
@@ -109,7 +103,7 @@ public class WeiboManager {
         public AuthDialogListener(Handler handler){
             this.handler=handler;
         }
-        @Override
+
         public void onComplete(Bundle values) {
             try {
                 String token=values.getString("access_token");
@@ -127,17 +121,14 @@ public class WeiboManager {
             }
         }
 
-        @Override
         public void onError(WeiboDialogError e) {
             Toast.makeText(WeiboManager.context, "Auth error : " + e.getMessage(), Toast.LENGTH_LONG).show();
         }
 
-        @Override
         public void onCancel() {
             Toast.makeText(WeiboManager.context, "Auth cancel", Toast.LENGTH_LONG).show();
         }
 
-        @Override
         public void onWeiboException(WeiboException e) {
             Toast.makeText(WeiboManager.context, "Auth exception : " + e.getMessage(), Toast.LENGTH_LONG).show();
         }

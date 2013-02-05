@@ -1,27 +1,18 @@
 package com.capsule.android;
 
+import android.os.Bundle;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+
 import com.capsule.android.widget.OnViewChangeListener;
 import com.capsule.android.widget.ScrollLayout;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.view.GestureDetector.OnGestureListener;
-import android.view.GestureDetector;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.ViewGroup.LayoutParams;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ViewFlipper;
-
 public class AgreementActivity extends BaseActivity implements OnViewChangeListener{
-
+ 
+	
     private LinearLayout focueLayout;
 
-    private int currentItem=0;
-    
     private ScrollLayout scrollLayout;
 
     private int[] images=new int[]{R.drawable.agreement_one, R.drawable.agreement_two, R.drawable.agreement_three};
@@ -67,7 +58,6 @@ public class AgreementActivity extends BaseActivity implements OnViewChangeListe
         }
     }
 
-    @Override
     public void onViewChange(int view) {
         setCurrentItme();
     }

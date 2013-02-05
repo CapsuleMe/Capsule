@@ -1,0 +1,166 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/nm_bg">
+
+    <RelativeLayout
+        android:id="@+id/name_card_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/nm_topbar" >
+        <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_centerVertical="true"
+		    android:text="名片"
+		    android:textSize="16sp"
+		    android:textColor="#fff"/>
+        
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="33dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/round_blue_btn"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="编辑"
+            android:textSize="14sp" />
+    </RelativeLayout>
+    
+    
+    <com.capsule.android.widget.NameCardView
+        android:id="@+id/namecard"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/name_card_top_bar"
+        android:layout_height="180dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/default_face"/>
+
+    <TextView
+        android:id="@+id/txtNameCardName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/namecard"
+        android:layout_alignLeft="@+id/namecard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="53dp"
+        android:layout_marginLeft='140px'
+        android:text="麦夫Payne"
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        android:textSize="16sp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/txtNameCardJob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtNameCardName"
+        android:layout_below="@+id/txtNameCardName"
+        android:text="web design"
+        android:textAppearance="?android:attr/textAppearanceSmall" 
+        android:textSize="11sp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/txtNameCardCompany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/namecard"
+        android:layout_alignTop="@+id/namecard"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="8dp"
+        android:gravity="right"
+        android:text="北京玩者天下网络技术有限公司"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="10sp" 
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/txtNameCardSchool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/namecard"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="8dp"
+        android:layout_below="@+id/txtNameCardCompany"
+        android:text="河北师范大学 美术学院"
+        android:textAppearance="?android:attr/textAppearanceSmall" 
+        android:textSize="10sp"
+        android:textColor="#000"/>
+
+	<TableLayout
+	    android:layout_alignRight="@+id/namecard"
+	    android:layout_alignLeft="@+id/namecard"
+	    android:layout_alignTop="@+id/namecard"
+	    android:layout_alignBottom="@+id/namecard"
+	    android:layout_marginLeft="95px"
+	    android:layout_marginTop="90dp"
+	    android:layout_marginBottom="5dp"
+	    android:layout_marginRight="5px"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:stretchColumns="*" >
+		<TableRow android:padding="5dp">
+		    <ImageView 
+		        android:layout_height="15dp"
+		        android:layout_width="15dp"
+		        android:layout_gravity="center_vertical"
+		        android:src="@drawable/nm_phone"/>
+		    <TextView
+		        android:id="@+id/txtNameCardPhone"
+		        android:layout_width="0dip"
+	      		android:layout_weight="2" 
+		        android:layout_gravity="center_vertical"
+		        android:textSize="10sp"
+		        android:text="+86 10 13436449106" 
+		        android:textColor="#000"/>
+
+		    <ImageView
+		        android:layout_width="fill_parent"
+		        android:layout_height="15dp"
+		        android:layout_gravity="center_vertical"
+		        android:src="@drawable/nm_qq" />
+
+		    <TextView  
+		        android:id="@+id/txtNameCardQQ"
+		        android:layout_width="0dip"
+	      		android:layout_weight="1.0" 
+		        android:layout_gravity="center_vertical"
+		        android:textSize="10sp"
+		        android:text="312856504"
+		        android:textColor="#000"/>
+		</TableRow>   
+		<TableRow android:padding="5dp">
+		      <ImageView 
+		        android:layout_height="15dp"
+		        android:layout_gravity="center_vertical"
+		        android:src="@drawable/nm_weibo"/>
+		    <TextView
+		        android:id="@+id/txtNameCardWeibo"
+		        android:layout_width="0dip"
+	      		android:layout_weight="1.0" 
+		        android:layout_gravity="center_vertical"
+		        android:textSize="10sp"
+		        android:text="麦夫的奏章" 
+		        android:textColor="#000"/>
+		</TableRow> 
+		<TableRow android:padding="5dp">
+		     <ImageView
+		        android:layout_height="15dp"
+		        android:layout_gravity="center_vertical"  
+		        android:src="@drawable/nm_mail"/>
+		    <TextView  
+		        android:id="@+id/txtNameCardMail"
+		        android:layout_gravity="center_vertical"
+		        android:textSize="10sp"
+		        android:text="chenbin2010@gmail.com"
+		        android:textColor="#000"/>
+		</TableRow>  
+	</TableLayout>
+</RelativeLayout>

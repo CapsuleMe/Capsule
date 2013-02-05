@@ -1,6 +1,5 @@
 package com.capsule.android.widget.itemview;
 
-import greendroid.widget.AsyncImageView;
 import greendroid.widget.item.Item;
 import greendroid.widget.itemview.ItemView;
 import android.content.Context;
@@ -9,11 +8,16 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.capsule.android.R;
+import com.capsule.android.cache.ImgCache;
+import com.capsule.android.widget.RoundedImageView;
 import com.capsule.android.widget.item.FriendItem;
 
 public class FriendItemView extends RelativeLayout implements ItemView {
 
-	private AsyncImageView mHeadView = null;
+	public static final String TestImgUrl =
+			"http://nunu.in/media/2010/04/Elisha-Cuthbert-girl-next-door-latest-pictures-wallpapers-photos-gallery-full-elisha-cuthbert-face.jpg";
+	
+	private RoundedImageView mHeadView = null;
 	private TextView mNameView = null;
 	private TextView mAddressView = null;
 	private TextView mTimeView = null;
@@ -38,23 +42,24 @@ public class FriendItemView extends RelativeLayout implements ItemView {
 
 	public void prepareItemView() {
 		// TODO Auto-generated method stub
-		mHeadView = (AsyncImageView)findViewById(R.id.friend_head);
+		mHeadView = (RoundedImageView)findViewById(R.id.friend_head);
 		mNameView = (TextView)findViewById(R.id.friend_name);
 		mAddressView = (TextView)findViewById(R.id.friend_address);
 		mTimeView = (TextView)findViewById(R.id.friend_time);
 		mDistanceView = (TextView)findViewById(R.id.friend_distance);
 		
+		mHeadView.setUrl(TestImgUrl);
+		mHeadView.setDefaultImageDrawable(ImgCache.getInstance().getDefaultFace());
 	}
 
 	public void setObject(Item item) {
 		// TODO Auto-generated method stub
 		final FriendItem fitem = (FriendItem)item;
-		mNameView.setText(fitem.friend.getUser().getName());
+		mNameView.setText(fitem.friend.getName());
 		mAddressView.setText(fitem.friend.getLocation().getAddress());
 		mTimeView.setText("10分钟前");
 		mDistanceView.setText("10.2m");
 		
 		
 	}
-
 }
