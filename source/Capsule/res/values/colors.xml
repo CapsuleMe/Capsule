@@ -3,6 +3,7 @@
 	<color name="white">#FFFFFF</color>
 	<color name="black">#000000</color>
 	<color name="grey">#CCCCCC</color>
+	<color name="grey_deep">#DDDDDD</color>
 	<color name="textColor">#656565</color>
 	<color name="textBlue">#006699</color>
 	<color name="map_button_background">#ddf4f4f4</color>
