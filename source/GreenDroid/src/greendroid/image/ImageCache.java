@@ -57,10 +57,10 @@ public class ImageCache implements OnLowMemoryListener {
     }
 
     public void put(String url, Bitmap bitmap) {
-    	if(mSoftCache.containsKey(url))
+    	/*if(mSoftCache.containsKey(url))
     	{
     		release(url);
-    	}
+    	}*/
     	
         mSoftCache.put(url, new SoftReference<Bitmap>(bitmap));
     }

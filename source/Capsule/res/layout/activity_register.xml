@@ -38,13 +38,12 @@
     
     <Button android:id="@+id/registerBtn"
             android:text="@string/register"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
         	android:layout_marginTop="15dp"
         	android:layout_height="40dip"
-        	android:background="@drawable/login_btn"
+        	android:background="@drawable/login_btn_selector"
         	android:layout_below="@+id/textAgreement"
         	android:contentDescription="@string/register"
-            style="@drawable/login_btn_selector"
             android:onClick="doRegister"/>
 
 

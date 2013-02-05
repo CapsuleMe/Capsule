@@ -236,6 +236,7 @@ public class AsyncImageView extends ImageView implements ImageRequestCallback {
 
             if (mBitmap != null) {
                 setImageBitmap(mBitmap);
+                mBitmap.recycle();
                 return;
             }
 
