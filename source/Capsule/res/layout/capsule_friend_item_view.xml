@@ -7,7 +7,8 @@
 	android:minHeight="?attr/gdItemViewPreferredHeight"
 	android:paddingLeft="?attr/gdItemViewPreferredPaddingLeft"
 	android:paddingRight="?attr/gdItemViewPreferredPaddingLeft"
-	android:background="#FFFFFF">
+	android:background="@drawable/list_item_bg"
+	android:clickable="true">
 	
 	<com.capsule.android.widget.RoundedImageView
 		android:id="@+id/friend_head"
