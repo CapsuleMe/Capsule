@@ -5,11 +5,12 @@
     android:background="@drawable/background"
     android:id="@+id/setting_layout">
 
-    <!-- title -->
+    <include layout="@layout/top_bar" android:id="@+id/top_bar"/>
 
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/top_bar"
         android:fadingEdge="none" >
 
         <LinearLayout
@@ -17,8 +18,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="vertical"
-            android:paddingBottom="15dip"
-            android:paddingTop="5dip" >
+            android:paddingBottom="15dip">
 
             <LinearLayout
                 android:layout_width="fill_parent"

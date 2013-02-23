@@ -22,7 +22,7 @@ import android.widget.Toast;
 
 import com.capsule.android.weibo.WeiboManager;
 import com.capsule.common.SharePreferencesEditor;
-import com.capsule.common.Tools;
+import com.capsule.common.CommonUtil;
 
 public class CardSettingActivity extends BaseActivity {
 
@@ -76,6 +76,9 @@ public class CardSettingActivity extends BaseActivity {
     }
 
     private void initUI(){
+        View topbar=findViewById(R.id.top_bar);
+        TextView titlebar=(TextView)topbar.findViewById(R.id.top_bar_title);
+        titlebar.setText(this.getString(R.string.edit_namecard));
         preferences=new SharePreferencesEditor(this, SharePreferencesEditor.SettingsName);
         //获取textview
         faceImage=(ImageView)findViewById(R.id.face);
@@ -104,10 +107,10 @@ public class CardSettingActivity extends BaseActivity {
         String imagePath=preferences.get("head_image_path", "");
         Bitmap factbitMap=null;
         if(!imagePath.equals("")){// 从preference中读取头像路径
-            factbitMap=Tools.fileToBitmap(imagePath);
+            factbitMap=CommonUtil.fileToBitmap(imagePath);
         }else{// 默认的头像
             BitmapDrawable defaultAvatarBitmap=(BitmapDrawable)getResources().getDrawable(R.drawable.default_face);
-            factbitMap=Tools.toRoundCorner(defaultAvatarBitmap.getBitmap(), 25);
+            factbitMap=CommonUtil.toRoundCorner(defaultAvatarBitmap.getBitmap(), 25);
         }
         // 设置值到textview中
         faceImage.setImageBitmap(factbitMap);
@@ -137,7 +140,7 @@ public class CardSettingActivity extends BaseActivity {
                     case 1:
                         Intent intentFromCapture=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                         // 判断存储卡是否可以用，可用进行存储
-                        if(Tools.hasSdcard()) {
+                        if(CommonUtil.hasSdcard()) {
                             intentFromCapture.putExtra(MediaStore.EXTRA_OUTPUT,
                                 Uri.fromFile(new File(Environment.getExternalStorageDirectory(), IMAGE_FILE_NAME)));
                         }
@@ -331,7 +334,7 @@ public class CardSettingActivity extends BaseActivity {
                     startPhotoZoom(data.getData());
                     break;
                 case CAMERA_REQUEST_CODE:
-                    if(Tools.hasSdcard()) {
+                    if(CommonUtil.hasSdcard()) {
                         File tempFile=new File(Environment.getExternalStorageDirectory() + File.separator +IMAGE_FILE_NAME);
                         startPhotoZoom(Uri.fromFile(tempFile));
                     } else {
@@ -377,8 +380,8 @@ public class CardSettingActivity extends BaseActivity {
         if(extras != null) {
             try {
                 Bitmap photo=extras.getParcelable("data"); 
-                Bitmap factbitMap=Tools.toRoundCorner(photo, 25);
-                String imagePath=Tools.bitmapToFile(this, IMAGE_FILE_NAME, factbitMap);
+                Bitmap factbitMap=CommonUtil.toRoundCorner(photo, 25);
+                String imagePath=CommonUtil.bitmapToFile(this, IMAGE_FILE_NAME, factbitMap);
                 preferences.put("head_image_path", imagePath);
                 faceImage.setImageBitmap(factbitMap);
             } catch(Exception e) {

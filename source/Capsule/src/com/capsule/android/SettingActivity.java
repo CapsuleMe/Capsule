@@ -56,6 +56,10 @@ public class SettingActivity extends BaseActivity{
     }
     
     private void initSetting(){
+        View topbar=findViewById(R.id.top_bar);
+        TextView titlebar=(TextView)topbar.findViewById(R.id.top_bar_title);
+        titlebar.setText(this.getString(R.string.setting));
+       
         preferences=new SharePreferencesEditor(this, SharePreferencesEditor.SettingsName);
         openRadio=this.getResources().getDrawable(R.drawable.radio_box_open);
         closeRadio=this.getResources().getDrawable(R.drawable.radio_box_close);

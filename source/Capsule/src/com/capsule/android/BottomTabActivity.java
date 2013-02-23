@@ -86,6 +86,7 @@ public class BottomTabActivity extends ActivityGroup {
 		viewList.add(new Intent(this, CapSuleMapActivity.class));
 		viewList.add(new Intent(this, NamecardActivity.class));
 		viewList.add(new Intent(this, SettingActivity.class));
+		viewList.add(new Intent(this, CardSettingActivity.class));
 		  
 	} 
 
