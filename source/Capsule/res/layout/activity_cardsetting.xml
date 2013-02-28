@@ -4,7 +4,8 @@
     android:layout_height="fill_parent"
     android:background="@drawable/background"
     android:id="@+id/cardsetting_layout">
-
+	
+	<include layout="@layout/top_bar" android:id="@+id/top_bar"/>
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
