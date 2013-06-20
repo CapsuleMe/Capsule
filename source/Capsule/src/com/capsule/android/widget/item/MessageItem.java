@@ -5,8 +5,8 @@ import greendroid.widget.itemview.ItemView;
 import android.content.Context;
 import android.view.ViewGroup;
 
+import com.capsule.android.R;
 import com.capsule.model.Message;
-import com.cyrilmottier.android.greendroid.R;
 
 public class MessageItem extends Item {
 
