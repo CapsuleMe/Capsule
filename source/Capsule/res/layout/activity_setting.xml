@@ -5,8 +5,7 @@
     android:background="@drawable/background"
     android:id="@+id/setting_layout">
 
-    <!-- title -->
-
+	<include layout="@layout/top_bar" android:id="@+id/top_bar"/>
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

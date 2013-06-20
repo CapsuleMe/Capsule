@@ -41,6 +41,8 @@
     <string name="find_him_by_contact">从手机通讯录找TA</string>
     <string name="exit_tip_content">退出后，下次您可以直接打开，不需要输入账号密码。</string>
     <string name="logout_tip_content">注销登录后，下次请使用您的手机号登录胶囊，您确定注销登录吗？</string>
+    <string name="setting">设置</string>
+    <string name="edit_namecard">编辑名片</string>
     <string name="face_setting">设置头像</string>
     <string name="user_sex">性别</string>
     <string name="capsule_name">名称</string>

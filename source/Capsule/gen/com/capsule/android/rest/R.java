@@ -15,8 +15,8 @@ public final class R {
 		public static final int ic_launcher = 0x7f02005f;
 	}
 	public static final class id {
-		public static final int editURL = 0x7f080049;
-		public static final int textConsole = 0x7f08004a;
+		public static final int editURL = 0x7f08004a;
+		public static final int textConsole = 0x7f08004b;
 	}
 	public static final class layout {
 		public static final int activity_test = 0x7f03000d;
