@@ -48,6 +48,7 @@
         <activity android:name=".SearchContactActivity"/>
         <activity android:name=".SearchFriendActivity"/>
         <activity android:name=".SettingActivity"/>
+        <activity android:name=".UserInfoActivity"/>
         
         <service android:name=".service.LocationService" />
   
