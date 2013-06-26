@@ -11,9 +11,15 @@ public abstract class BaseActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		
+		application = (MyApplication)getApplication();
+		
 		myNavigator = new Navigator(this);
+		
+		
 	}
 
 	protected Navigator myNavigator = null;
+	protected MyApplication application = null;
 
 }
