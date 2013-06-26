@@ -1,10 +1,10 @@
 package com.capsule.android;
 
+import greendroid.app.GDApplication;
 import android.content.Context;
 
 import com.capsule.android.cache.FriendManager;
-
-import greendroid.app.GDApplication;
+import com.capsule.android.cache.UserCache;
 
 public class MyApplication extends GDApplication {
 
@@ -12,6 +12,7 @@ public class MyApplication extends GDApplication {
 	
 	public FriendManager fManager = null;
 
+	public UserCache userCache = null;
 	
 	@Override
 	public void onCreate() {
@@ -25,5 +26,7 @@ public class MyApplication extends GDApplication {
 	private void loadData(){
 		fManager = new FriendManager();
 		fManager.load();
+		
+		userCache = new UserCache();
 	}
 }
