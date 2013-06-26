@@ -12,9 +12,9 @@ public class UserClient extends RestClient {
 		super(tmp);
 	}
 
-	public User register(String number, String password) {
+	public User register(String name, String password) {
 		MultiValueMap<String, String> mvm = new LinkedMultiValueMap<String, String>();
-		mvm.add("number", number);
+		mvm.add("name", name);
 		mvm.add("password", password);
 
 		return template
