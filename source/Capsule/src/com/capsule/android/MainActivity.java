@@ -15,8 +15,6 @@ public class MainActivity extends BaseActivity{
         setContentView(R.layout.activity_main);
         View layout=findViewById(R.id.welcomeLayout);
         layout.getBackground().setAlpha(180);
-        
-       myNavigator.switchTo(Navigator.BottomTabActivitySEQ);
     }
 
     
