@@ -1102,6 +1102,7 @@ containing a value of this type.
         public static final int mobile_phone=0x7f060050;
         public static final int number=0x7f06002c;
         public static final int password=0x7f060025;
+        public static final int please_input_your_name=0x7f06005d;
         public static final int position=0x7f06004e;
         public static final int qq=0x7f060051;
         public static final int register=0x7f060023;

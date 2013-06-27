@@ -21,7 +21,10 @@ public abstract class RestClient {
 	}
 
 	public String GetURL(String route, String func) {
-		return baseURL + route + "/" + func;
+		if(baseURL.endsWith("/"))
+			return baseURL + route + "/" + func;
+		
+		return baseURL + "/"+ route + "/" + func;
 	}
 
 }

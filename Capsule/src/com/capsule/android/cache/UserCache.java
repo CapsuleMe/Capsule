@@ -14,7 +14,7 @@ public class UserCache extends Observable{
 	
 	public void UpdateUser(User user){
 		user = new User();
-		notify();
+		notifyObservers(this);
 	}
 	
 	public void UpdateUser(com.capsule.android.rest.models.User restUser){
@@ -26,6 +26,6 @@ public class UserCache extends Observable{
 		user.setName(restUser.getName());
 		user.setPassword(restUser.getPassword());
 		
-		notify();
+		notifyObservers(this);
 	}
 }

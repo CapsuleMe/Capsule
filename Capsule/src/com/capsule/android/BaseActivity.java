@@ -18,7 +18,7 @@ public abstract class BaseActivity extends Activity {
 		
 		
 	}
-
+	
 	protected Navigator myNavigator = null;
 	protected MyApplication application = null;
 

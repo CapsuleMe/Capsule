@@ -66,4 +66,5 @@
     <string name="title_activity_search_friend">SearchFriendActivity</string>
     <string name="title_activity_search_friend_result">SearchFriendResultActivity</string>
     <string name="title_activity_namecard">MainActivity</string>
+    <string name="please_input_your_name">请先告诉我你的大名，谢谢</string>
 </resources>

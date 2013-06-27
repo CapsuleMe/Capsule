@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.http.client.ClientHttpRequestInterceptor;
+import org.springframework.http.converter.json.GsonHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
 import com.capsule.android.rest.api.FriendClient;
@@ -14,7 +15,7 @@ import com.capsule.android.rest.extend.MyClientHttpRequestInterceptor;
 
 public class RestFactory {
 	
-	public static String BaseUrl = null;
+	public static String BaseUrl = "http://10.0.2.2:3000/";
 	
 	private static RestTemplate template = null;
 	
@@ -23,7 +24,8 @@ public class RestFactory {
 		if(template == null){
 			template = new RestTemplate(true);
 			
-			//Enable session cookie saving
+			template.getMessageConverters().add(new GsonHttpMessageConverter());
+
 			List<ClientHttpRequestInterceptor> interceptors = new ArrayList<ClientHttpRequestInterceptor>();
 			interceptors.add(new MyClientHttpRequestInterceptor());
 			template.setInterceptors(interceptors);
