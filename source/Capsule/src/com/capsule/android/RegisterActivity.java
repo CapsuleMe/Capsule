@@ -15,7 +15,7 @@ public class RegisterActivity extends BaseActivity {
 
 	private String password = null;
 	
-	EditText editTextName = null;
+	private EditText editTextName = null;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class RegisterActivity extends BaseActivity {
     }
     
     public void doRegister(View target){
-    	String name = editTextName.toString();
+    	String name = editTextName.getText().toString();
     	
     	if(name == null || name.isEmpty()){
     		Toast.makeText(this, "请先告诉我你的大名，谢谢!", Toast.LENGTH_SHORT).show();
@@ -44,10 +44,10 @@ public class RegisterActivity extends BaseActivity {
     		return;
     	}
     	
-    	RestFactory.BaseUrl = "http://10.200.52.62:3000";
+    	//RestFactory.BaseUrl = "http://10.200.52.62:3000";
     	User restUser = RestFactory.getUserClient().register(name, password);
-    	application.userCache.UpdateUser(restUser);
-    	myNavigator.switchTo(Navigator.FriendListActivitySEQ);
+//    	application.userCache.UpdateUser(restUser);
+//    	myNavigator.switchTo(Navigator.FriendListActivitySEQ);
     }
     
    /* private void sendValidCode(){
