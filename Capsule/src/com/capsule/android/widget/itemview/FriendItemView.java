@@ -65,7 +65,7 @@ public class FriendItemView extends RelativeLayout implements ItemView, OnClickL
 		fitem = (FriendItem)item;
 		mNameView.setText(fitem.friend.getName());
 		mAddressView.setText(fitem.friend.getLocation().getAddress());
-		mTimeView.setText("10·ÖÖÓÇ°");
+		mTimeView.setText("10åˆ†é’Ÿå‰");
 		mDistanceView.setText("10.2m");
 
 

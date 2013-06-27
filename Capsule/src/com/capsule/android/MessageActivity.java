@@ -67,14 +67,14 @@ public class MessageActivity extends ListActivity {
     {
     	User user = new User();
     	user.setId("1");
-    	user.setName("¿¨±ÈÊŞ");
+    	user.setName("å¡æ¯”å…½");
     	user.setNumber("186111111");
     	user.setPassword("ttt");
     	
     	
     	Message msg = new Message();
     	msg.setUser(user);
-    	msg.setContent("ËµÎÒ°®Äã");
+    	msg.setContent("è¯´æˆ‘çˆ±ä½ ");
     	msg.setDatetime(new Date());
     	
     	return msg;

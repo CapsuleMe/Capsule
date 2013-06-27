@@ -60,14 +60,14 @@ public class FriendManager extends ObservableCollcetion<Friend> {
 	private Friend getFriend(boolean isFriend)
 	{
 		Location location = new Location();
-    	location.setAddress("±±¾©ÊĞº£µíÇøÖĞ¹Ø´å¶«Â·1ºÅÈü¶û´óÏÃ22²ã");
+    	location.setAddress("åŒ—äº¬å¸‚æµ·æ·€åŒºä¸­å…³æ‘ä¸œè·¯1å·èµ›å°”å¤§å¦22å±‚");
     	location.setLatitude(123);
     	location.setLongitude(123);
     	location.setDateTime(new Date());
     	
     	Friend f = new Friend();
      	f.setId("1");
-    	f.setName(isFriend?"ÏÜ³¬":"¿¨±ÈÊŞ");
+    	f.setName(isFriend?"å®ªè¶…":"å¡æ¯”å…½");
     	f.setFtype(isFriend?Friend.FRIEND:Friend.VIP);
     	f.setNumber("186111111");
     	f.setPassword("ttt");

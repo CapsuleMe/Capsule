@@ -30,14 +30,14 @@ public class CardSettingActivity extends BaseActivity {
 
     private SharePreferencesEditor preferences;
     
-    private String[] picItems=new String[]{"Ñ¡Ôñ±¾µØÍ¼Æ¬", "ÅÄÕÕ"};
+    private String[] picItems=new String[]{"é€‰æ‹©æœ¬åœ°å›¾ç‰‡", "æ‹ç…§"};
 
-    private String[] sexItems=new String[]{"ÊçÅ®", "ÉğÊ¿"};
+    private String[] sexItems=new String[]{"æ·‘å¥³", "ç»…å£«"};
 
-    /* Í·ÏñÃû³Æ */
+    /* å¤´åƒåç§° */
     private static final String IMAGE_FILE_NAME="faceImage.png";
 
-    /* ÇëÇóÂë */
+    /* è¯·æ±‚ç  */
     private static final int IMAGE_REQUEST_CODE=0;
 
     private static final int CAMERA_REQUEST_CODE=1;
@@ -80,7 +80,7 @@ public class CardSettingActivity extends BaseActivity {
         TextView titlebar=(TextView)topbar.findViewById(R.id.top_bar_title);
         titlebar.setText(this.getString(R.string.edit_namecard));
         preferences=new SharePreferencesEditor(this, SharePreferencesEditor.SettingsName);
-        //»ñÈ¡textview
+        //è·å–textview
         faceImage=(ImageView)findViewById(R.id.face);
         capsuleNameTxtView=(TextView)findViewById(R.id.capsuleName);
         userIntrodueTxtView=(TextView)findViewById(R.id.userIntrodue);
@@ -92,7 +92,7 @@ public class CardSettingActivity extends BaseActivity {
         userQQTxtView=(TextView)findViewById(R.id.userQQ);
         userEmailTxtView=(TextView)findViewById(R.id.userEmail);
         userSinaWeiboTxtView=(TextView)findViewById(R.id.userSinaWeibo);
-        // ´ÓpreferenceÎÄ¼şÖĞ»ñÈ¡Öµ
+        // ä»preferenceæ–‡ä»¶ä¸­è·å–å€¼
         String capsuleNameTxtValue=preferences.get("capsuleName", capsuleNameTxtView.getText().toString());
         String userIntrodueTxtValue=preferences.get("userIntrodue", userIntrodueTxtView.getText().toString());
         String userSexTxtValue=String.valueOf(preferences.get("userSexIndex", 0));
@@ -106,13 +106,13 @@ public class CardSettingActivity extends BaseActivity {
         
         String imagePath=preferences.get("head_image_path", "");
         Bitmap factbitMap=null;
-        if(!imagePath.equals("")){// ´ÓpreferenceÖĞ¶ÁÈ¡Í·ÏñÂ·¾¶
+        if(!imagePath.equals("")){// ä»preferenceä¸­è¯»å–å¤´åƒè·¯å¾„
             factbitMap=CommonUtil.fileToBitmap(imagePath);
-        }else{// Ä¬ÈÏµÄÍ·Ïñ
+        }else{// é»˜è®¤çš„å¤´åƒ
             BitmapDrawable defaultAvatarBitmap=(BitmapDrawable)getResources().getDrawable(R.drawable.default_face);
             factbitMap=CommonUtil.toRoundCorner(defaultAvatarBitmap.getBitmap(), 25);
         }
-        // ÉèÖÃÖµµ½textviewÖĞ
+        // è®¾ç½®å€¼åˆ°textviewä¸­
         faceImage.setImageBitmap(factbitMap);
         capsuleNameTxtView.setText(capsuleNameTxtValue);
         userIntrodueTxtView.setText(userIntrodueTxtValue);
@@ -133,13 +133,13 @@ public class CardSettingActivity extends BaseActivity {
                 switch(which) {
                     case 0:
                         Intent intentFromGallery=new Intent();
-                        intentFromGallery.setType("image/*"); // ÉèÖÃÎÄ¼şÀàĞÍ
+                        intentFromGallery.setType("image/*"); // è®¾ç½®æ–‡ä»¶ç±»å‹
                         intentFromGallery.setAction(Intent.ACTION_GET_CONTENT);
                         startActivityForResult(intentFromGallery, IMAGE_REQUEST_CODE);
                         break;
                     case 1:
                         Intent intentFromCapture=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                        // ÅĞ¶Ï´æ´¢¿¨ÊÇ·ñ¿ÉÒÔÓÃ£¬¿ÉÓÃ½øĞĞ´æ´¢
+                        // åˆ¤æ–­å­˜å‚¨å¡æ˜¯å¦å¯ä»¥ç”¨ï¼Œå¯ç”¨è¿›è¡Œå­˜å‚¨
                         if(CommonUtil.hasSdcard()) {
                             intentFromCapture.putExtra(MediaStore.EXTRA_OUTPUT,
                                 Uri.fromFile(new File(Environment.getExternalStorageDirectory(), IMAGE_FILE_NAME)));
@@ -178,7 +178,7 @@ public class CardSettingActivity extends BaseActivity {
     
     public void showUserIntrodueDialog(View target){ 
         onCreateDialog();
-        alertTxt.setHint("15¸öºº×Ö");
+        alertTxt.setHint("15ä¸ªæ±‰å­—");
         alertTxt.setText(userIntrodueTxtView.getText());
         new AlertDialog.Builder(this).setTitle(this.getString(R.string.user_introdue))
               .setView(alertView)
@@ -326,7 +326,7 @@ public class CardSettingActivity extends BaseActivity {
     
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        // ½á¹ûÂë²»µÈÓÚÈ¡ÏûÊ±ºò
+        // ç»“æœç ä¸ç­‰äºå–æ¶ˆæ—¶å€™
         if(resultCode != RESULT_CANCELED) {
 
             switch(requestCode) {
@@ -338,7 +338,7 @@ public class CardSettingActivity extends BaseActivity {
                         File tempFile=new File(Environment.getExternalStorageDirectory() + File.separator +IMAGE_FILE_NAME);
                         startPhotoZoom(Uri.fromFile(tempFile));
                     } else {
-                        Toast.makeText(this, "Î´ÕÒµ½´æ´¢¿¨£¬ÎŞ·¨´æ´¢ÕÕÆ¬£¡", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, "æœªæ‰¾åˆ°å­˜å‚¨å¡ï¼Œæ— æ³•å­˜å‚¨ç…§ç‰‡ï¼", Toast.LENGTH_LONG).show();
                     }
 
                     break;
@@ -353,18 +353,18 @@ public class CardSettingActivity extends BaseActivity {
     }
 
     /**
-     * ²Ã¼ôÍ¼Æ¬·½·¨ÊµÏÖ
+     * è£å‰ªå›¾ç‰‡æ–¹æ³•å®ç°
      * @param uri
      */
     public void startPhotoZoom(Uri uri) {
         Intent intent=new Intent("com.android.camera.action.CROP");
         intent.setDataAndType(uri, "image/*");
-        // ÉèÖÃ²Ã¼ô
+        // è®¾ç½®è£å‰ª
         intent.putExtra("crop", "true");
-        // aspectX aspectY ÊÇ¿í¸ßµÄ±ÈÀı
+        // aspectX aspectY æ˜¯å®½é«˜çš„æ¯”ä¾‹
         intent.putExtra("aspectX", 1);
         intent.putExtra("aspectY", 1);
-        // outputX outputY ÊÇ²Ã¼ôÍ¼Æ¬¿í¸ß
+        // outputX outputY æ˜¯è£å‰ªå›¾ç‰‡å®½é«˜
         intent.putExtra("outputX", 320);
         intent.putExtra("outputY", 320);
         intent.putExtra("return-data", true);
@@ -372,7 +372,7 @@ public class CardSettingActivity extends BaseActivity {
     }
 
     /**
-     * ±£´æ²Ã¼ôÖ®ºóµÄÍ¼Æ¬Êı¾İ
+     * ä¿å­˜è£å‰ªä¹‹åçš„å›¾ç‰‡æ•°æ®
      * @param picdata
      */
     private void getImageToView(Intent data) {

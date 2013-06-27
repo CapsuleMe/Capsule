@@ -34,15 +34,15 @@ public class SearchContactActivity extends ListActivity {
     	List<Item> items = new ArrayList<Item>();
     	
     	TempUser u1 = new TempUser();
-    	u1.setName("ºÃÓÑ");
+    	u1.setName("å¥½å‹");
     	u1.setFriend(true);
     	
     	TempUser u2 = new TempUser();
-    	u2.setName("×¢²áÓÃ»§");
+    	u2.setName("æ³¨å†Œç”¨æˆ·");
     	u2.setUser(true);
     	
     	TempUser u3 = new TempUser();
-    	u3.setName("Î´×¢²á");
+    	u3.setName("æœªæ³¨å†Œ");
 
     	items.add(new SearchContactItem(u1));
     	items.add(new SearchContactItem(u2));

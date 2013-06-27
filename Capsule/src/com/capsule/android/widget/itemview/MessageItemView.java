@@ -52,7 +52,7 @@ public class MessageItemView extends RelativeLayout implements ItemView{
 		final MessageItem mitem = (MessageItem)item;
 		mNameView.setText(mitem.msg.getUser().getName());
 		mContentView.setText(mitem.msg.getContent());
-		mTimeView.setText("10·ÖÖÓÇ°");
+		mTimeView.setText("10åˆ†é’Ÿå‰");
 		
 		
 	}
