@@ -15,6 +15,12 @@ public class User {
 	private String password;
 	@DatabaseField
 	private String name;
+	@DatabaseField
+	private String role;
+	@DatabaseField
+	private boolean male;
+	@DatabaseField
+	private String head;
 	
 	public String getId() {
 		return id;
@@ -39,6 +45,24 @@ public class User {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
+	public boolean isMale() {
+		return male;
+	}
+	public void setMale(boolean male) {
+		this.male = male;
+	}
+	public String getHead() {
+		return head;
+	}
+	public void setHead(String head) {
+		this.head = head;
 	}
 	
 	
