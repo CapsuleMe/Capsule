@@ -60,13 +60,14 @@ public class RegisterActivity extends BaseActivity {
 		@Override
 		protected User doInBackground(String... names) {
 	    	User restUser = RestFactory.getUserClient().register(names[0], password);
+	    	restUser.setPassword(password);
 			return restUser;
 		}
     	
 		@Override
 		protected void onPostExecute(User user) {
 			// TODO Auto-generated method stub		
-			application.userCache.UpdateUser(user);
+			application.cache.getUser().updateUser(user);
 			CommonUtil.closeLodingDialog();
 	    	myNavigator.switchTo(Navigator.BottomTabActivitySEQ);
 	    	
