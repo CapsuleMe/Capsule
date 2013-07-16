@@ -1,18 +1,20 @@
 package com.capsule.android.db;
 
 import java.sql.SQLException;
+import java.util.Iterator;
 import java.util.List;
 
 import android.content.Context;
 
 import com.capsule.model.User;
+import com.j256.ormlite.dao.Dao.CreateOrUpdateStatus;
 import com.j256.ormlite.stmt.PreparedQuery;
 
 public class UserDataManager extends DataManager<User> {
 
-	public UserDataManager(Context context, Class<User> clazz)
+	public UserDataManager(Class<User> clazz)
 			throws SQLException {
-		super(context, clazz);
+		super(clazz);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -40,5 +42,21 @@ public class UserDataManager extends DataManager<User> {
 		return getDao().query(q);
 	}
 
+	@Override
+	public Iterator<User> read() throws SQLException {
+		// TODO Auto-generated method stub
+		return getDao().getWrappedIterable().iterator();
+	}
+
+	@Override
+	public CreateOrUpdateStatus createOrUpdate(User obj) throws SQLException {
+		// TODO Auto-generated method stub
+		return getDao().createOrUpdate(obj);
+	}
+	
+
+
+	
+	
 	
 }
