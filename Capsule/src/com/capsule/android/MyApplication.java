@@ -3,17 +3,13 @@ package com.capsule.android;
 import greendroid.app.GDApplication;
 import android.content.Context;
 
-import com.capsule.android.cache.FriendManager;
-import com.capsule.android.cache.UserCache;
+import com.capsule.android.cache.CacheFactory;
 import com.capsule.android.rest.RestFactory;
 
 public class MyApplication extends GDApplication {
 
 	public static Context CONTEXT = null;
-	
-	public FriendManager fManager = null;
-
-	public UserCache userCache = null;
+	public CacheFactory cache = null;
 	
 	@Override
 	public void onCreate() {
@@ -21,15 +17,15 @@ public class MyApplication extends GDApplication {
 		super.onCreate();
 		CONTEXT = this;
 		
-		RestFactory.BaseUrl = "http://10.200.52.62:3000";
+		//RestFactory.BaseUrl = "http://10.200.52.62:3000";
+		RestFactory.BaseUrl = "http://10.0.2.2:3000/";
 		
-		loadData();
+		CacheData();
 	}
 
-	private void loadData(){
-		fManager = new FriendManager();
-		fManager.load();
+	private void CacheData(){
 		
-		userCache = new UserCache();
+		cache = new CacheFactory();
+		cache.load();
 	}
 }
