@@ -1,13 +1,6 @@
 package com.capsule.android;
 
 import greendroid.widget.ItemAdapter;
-import greendroid.widget.item.Item;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,9 +8,7 @@ import android.view.View.OnFocusChangeListener;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
-import com.capsule.android.widget.item.FriendItem;
 import com.capsule.common.Navigator;
-import com.capsule.model.Friend;
 
 
 
@@ -71,7 +62,7 @@ public class FriendActivity extends BaseListActivity {
     
     private void FillList(boolean isFriend)
     {
-    	   MyApplication app = (MyApplication)getApplicationContext();
+    	  /* MyApplication app = (MyApplication)getApplicationContext();
     	   Collection<Friend> coll = app.fManager.getAll(isFriend?Friend.FRIEND:Friend.VIP);
     	   Iterator<Friend> it = coll.iterator();
     	   
@@ -80,7 +71,7 @@ public class FriendActivity extends BaseListActivity {
     		   items.add(new FriendItem(it.next()));
     	   }
            final ItemAdapter adapter = new ItemAdapter(this, items);
-           setListAdapter(adapter);
+           setListAdapter(adapter);*/
     }
     
    /* @Override
